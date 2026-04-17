@@ -1,0 +1,86 @@
+name: Marketing Tamiris — Squad Integrada
+icon: 📱
+status: active
+description: Squad responsável por todo marketing e automação de redes sociais (Instagram, TikTok, Facebook) com foco em crescimento de autoridade e captação de pacientes
+
+# Escopo
+scope: "Marketing digital integrado com publicação automática"
+target_output: "Carrosseis Instagram, Stories, Roteiros de Reels, Conteúdo TikTok/Facebook"
+frequency: "Publicações diárias"
+
+# Configuração
+config:
+  language: "português"
+  tone: "Estratégico, humanizado, com autoridade científica"
+  brand_voice_reference: "_memory/brand-identity.md"
+  
+# Canais
+channels:
+  - name: instagram
+    platforms:
+      - "instagram_carousel"
+      - "instagram_stories"
+      - "instagram_reel_scripts"
+    frequency: "daily"
+    auto_publish: true
+    
+  - name: tiktok
+    platforms:
+      - "tiktok_vertical_video"
+    frequency: "daily"
+    auto_publish: true
+    
+  - name: facebook
+    platforms:
+      - "facebook_post"
+    frequency: "daily"
+    auto_publish: true
+
+# Pipeline
+pipeline:
+  - phase: "research"
+    description: "Pesquisa diária de tendências, competitors, trending topics"
+    agents: ["researcher", "strategist"]
+    
+  - phase: "ideation"
+    description: "Definição de tema do dia e estratégia de abordagem"
+    agents: ["strategist"]
+    
+  - phase: "content_creation"
+    description: "Criação de conteúdo com casos, hooks, copy"
+    agents: ["humanizer", "copywriter"]
+    
+  - phase: "design"
+    description: "Aplicação de design visual e escolha/adaptação de fotos"
+    agents: ["designer"]
+    
+  - phase: "reel_scripts"
+    description: "Criação de roteiros de reels"
+    agents: ["scriptwriter"]
+    
+  - phase: "publication"
+    description: "Publicação automática nos 3 canais"
+    agents: ["publisher"]
+    
+# Agents (definidos em squad-party.csv)
+agents:
+  - "strategist"
+  - "researcher"
+  - "humanizer"
+  - "copywriter"
+  - "designer"
+  - "scriptwriter"
+  - "publisher"
+
+# Dados
+data_inputs:
+  - "brand_identity.md"
+  - "competitors-analysis.md"
+  - "editorial-calendar.md"
+  
+data_outputs:
+  - "output/daily-carousel.md"
+  - "output/daily-stories.md"
+  - "output/daily-reel-script.md"
+  - "output/daily-tiktok-post.md"
+  - "output/daily-facebook-post.md"

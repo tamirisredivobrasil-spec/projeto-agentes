@@ -1,0 +1,703 @@
+{
+  "posts": [
+    {
+      "id": "dia-11",
+      "tema": "ansiedade clinica",
+      "formato": "carrossel",
+      "titulo": "Quando a ansiedade deixa de ser normal?",
+      "copy": [
+        {
+          "cls": "photo quote",
+          "bg": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Ansiedade clinica",
+          "title": "Quando a ansiedade deixa de ser normal?",
+          "text": [
+            "Sentir ansiedade e humano. Mas existe um ponto em que ela para de te proteger e comeca a te prender."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Entendendo o sinal",
+          "text": [
+            "A ansiedade normal desaparece depois que a ameaca passa.",
+            "A ansiedade clinica fica. Ela antecipa perigos que ainda nao existem."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Ponto de observacao",
+          "text": [
+            "Se o seu cerebro esta sempre em <span class=\"hl\">modo alerta</span> mesmo quando tudo esta bem, esse e um sinal importante para buscar avaliacao."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "Se o seu cerebro esta sempre em <span class=\"hl\">modo alerta</span> mesmo quando tudo esta bem, esse e um sinal importante para buscar avaliacao.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-12",
+      "tema": "terapia",
+      "formato": "carrossel",
+      "titulo": "Sera que eu preciso mesmo de terapia?",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Pergunta importante",
+          "title": "Sera que eu preciso mesmo de terapia?",
+          "text": [
+            "<span class=\"hl\">Veja na legenda.</span>"
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Nao e preciso colapsar",
+          "text": [
+            "Voce nao precisa estar em crise para ir a terapia.",
+            "Voce pode ir porque quer se entender melhor e parar de repetir os mesmos padroes."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Reenquadramento",
+          "text": [
+            "A terapia nao e para quem esta quebrado.",
+            "E para quem quer parar de se machucar <span class=\"hl\">sem perceber</span>."
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "E para quem quer parar de se machucar <span class=\"hl\">sem perceber</span>.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-13",
+      "tema": "terapia cognitivo-comportamental",
+      "formato": "carrossel",
+      "titulo": "Terapia nao e bate-papo.",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Psicoeducacao",
+          "title": "Terapia nao e bate-papo.",
+          "text": [
+            "E um processo estruturado de mudanca real."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Na TCC",
+          "text": [
+            "Cada sessao tem um objetivo.",
+            "Nos identificamos os pensamentos automaticos que sabotam sua vida e os testamos na pratica."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Valor do processo",
+          "text": [
+            "Voce nao paga para desabafar.",
+            "Voce paga para aprender a pensar e agir de forma diferente."
+          ]
+        }
+      ],
+      "objetivo": "autoridade",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "Voce paga para aprender a pensar e agir de forma diferente.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-14",
+      "tema": "distimia",
+      "formato": "carrossel",
+      "titulo": "O que e distimia?",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Humor persistente",
+          "title": "O que e distimia?",
+          "text": [
+            "A depressao que muita gente nao reconhece."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Como aparece",
+          "text": [
+            "A distimia e uma tristeza cronica e baixa.",
+            "Voce funciona, mas nao se sente viva. Ela rouba a cor de tudo."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Olhar clinico",
+          "text": [
+            "Por ser discreta, ela pode durar anos sem diagnostico.",
+            "Se voce vive em modo baixo ha muito tempo, isso merece atencao."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "Se voce vive em modo baixo ha muito tempo, isso merece atencao.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-15",
+      "tema": "sono e regulacao emocional",
+      "formato": "carrossel",
+      "titulo": "Dormir mal por uma semana ja altera sua regulacao emocional.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Sono e emocao",
+          "title": "Dormir mal por uma semana ja altera sua regulacao emocional.",
+          "text": []
+        },
+        {
+          "cls": "light",
+          "kicker": "Nao e preguica",
+          "text": [
+            "Durante o sono, o cerebro processa memorias do dia e faz limpeza metabolica.",
+            "Privacao de sono e privacao de saude mental."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": null,
+      "status": "pendente"
+    },
+    {
+      "id": "dia-16",
+      "tema": "sindrome do impostor",
+      "formato": "carrossel",
+      "titulo": "Sindrome do impostor.",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Autoimagem",
+          "title": "Sindrome do impostor.",
+          "text": [
+            "Quando voce nao consegue acreditar no proprio merito."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Como ela fala",
+          "text": [
+            "Voce conquista algo e pensa: \"foi sorte\".",
+            "Recebe um elogio e pensa: \"se soubessem como eu sou de verdade...\""
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Nome correto",
+          "text": [
+            "A sindrome do impostor nao e humildade.",
+            "E um pensamento distorcido que te impede de ocupar o espaco que voce merece."
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "E um pensamento distorcido que te impede de ocupar o espaco que voce merece.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-17",
+      "tema": "apego ansioso e evitativo",
+      "formato": "carrossel",
+      "titulo": "Apego ansioso ou apego evitativo?",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Relacoes",
+          "title": "Apego ansioso ou apego evitativo?",
+          "text": [
+            "Por que voce atrai sempre o mesmo padrao."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Dois movimentos",
+          "text": [
+            "Quem tem apego ansioso precisa de confirmacao constante.",
+            "Quem tem apego evitativo se afasta quando a intimidade aumenta."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Boa noticia",
+          "text": [
+            "Esses padroes se formam cedo, mas <span class=\"hl\">podem ser reescritos</span> com consciencia e processo terapeutico."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "Esses padroes se formam cedo, mas <span class=\"hl\">podem ser reescritos</span> com consciencia e processo terapeutico.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-18",
+      "tema": "procrastinacao",
+      "formato": "carrossel",
+      "titulo": "Por que voce procrastina mesmo querendo muito terminar?",
+      "copy": [
+        {
+          "cls": "photo quote",
+          "bg": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Procrastinacao",
+          "title": "Por que voce procrastina mesmo querendo muito terminar?",
+          "text": []
+        },
+        {
+          "cls": "dark",
+          "kicker": "Funcao emocional",
+          "text": [
+            "Procrastinacao e uma estrategia de regulacao emocional.",
+            "Voce evita a tarefa para fugir do desconforto que ela gera."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Nova leitura",
+          "text": [
+            "Nao e preguica. <span class=\"hl\">E protecao.</span>",
+            "Quando voce entende isso, se trata com mais compaixao e consegue agir."
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "Quando voce entende isso, se trata com mais compaixao e consegue agir.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-19",
+      "tema": "regulacao emocional",
+      "formato": "carrossel",
+      "titulo": "Na pratica.",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Regulacao emocional",
+          "title": "Na pratica.",
+          "text": [
+            "Tres estrategias baseadas em evidencias."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Passo 1",
+          "text": [
+            "<span class=\"hl\">Nomeie a emocao.</span> Dizer \"estou com raiva\" ja reduz a intensidade do que voce sente."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Passos 2 e 3",
+          "text": [
+            "<span class=\"hl\">Questione o pensamento.</span> Isso e fato ou interpretacao?",
+            "<span class=\"hl\">Aja no corpo.</span> Respiracao lenta ativa o freio do sistema nervoso."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "<span class=\"hl\">Aja no corpo.</span> Respiracao lenta ativa o freio do sistema nervoso.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-20",
+      "tema": "limites saudaveis",
+      "formato": "carrossel",
+      "titulo": "Limite saudavel nao e frieza.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Limites",
+          "title": "Limite saudavel nao e frieza.",
+          "text": [
+            "E <span class=\"hl\">respeito por si mesmo.</span>"
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Definicao simples",
+          "text": [
+            "Limite e a linha entre o que te nutre e o que te esgota.",
+            "Dizer nao nao te torna egoista. Te torna alguem que se cuida."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Quando vem culpa",
+          "text": [
+            "Se voce sente culpa toda vez que coloca um limite, essa culpa tem historia.",
+            "<span class=\"hl\">E essa historia pode ser trabalhada.</span>"
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "<span class=\"hl\">E essa historia pode ser trabalhada.</span>",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-21",
+      "tema": "overthinking",
+      "formato": "carrossel",
+      "titulo": "Como sair do loop?",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Overthinking",
+          "title": "Como sair do loop?",
+          "text": []
+        },
+        {
+          "cls": "dark",
+          "kicker": "O que acontece",
+          "text": [
+            "A mente que pensa demais nao esta procurando solucoes.",
+            "Ela esta tentando controlar o que nao pode controlar."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Pergunta util",
+          "text": [
+            "Quando perceber que esta em loop, pergunte:",
+            "\"Existe uma acao que eu possa tomar agora?\""
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "\"Existe uma acao que eu possa tomar agora?\"",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-22",
+      "tema": "autocompaixao",
+      "formato": "carrossel",
+      "titulo": "Autocritica x autocompaixao.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Autorelacao",
+          "title": "Autocritica x autocompaixao.",
+          "text": [
+            "Um te pune. O outro te transforma."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Comparacao",
+          "text": [
+            "A autocritica diz: \"que idiota, errei de novo\".",
+            "A autocompaixao diz: \"errei, isso doi, e eu posso aprender com isso\"."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Mudanca real",
+          "text": [
+            "Ser gentil consigo mesmo nao e se acomodar.",
+            "E criar as condicoes emocionais para <span class=\"hl\">crescer de verdade</span>."
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "E criar as condicoes emocionais para <span class=\"hl\">crescer de verdade</span>.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-23",
+      "tema": "relacao consigo",
+      "formato": "carrossel",
+      "titulo": "O relacionamento que voce tem com voce define todos os outros.",
+      "copy": [
+        {
+          "cls": "photo quote",
+          "bg": "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Relacao consigo",
+          "title": "O relacionamento que voce tem com voce define todos os outros.",
+          "text": []
+        },
+        {
+          "cls": "light",
+          "kicker": "Peso no outro",
+          "text": [
+            "Se voce nao se sente suficiente, vai buscar no outro a confirmacao de que existe.",
+            "Isso coloca um peso impossivel em qualquer relacao."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Direcao da terapia",
+          "text": [
+            "A terapia construi uma relacao saudavel com a pessoa com quem voce mais vai conviver na vida:",
+            "<span class=\"hl\">voce mesma.</span>"
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "<span class=\"hl\">voce mesma.</span>",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-24",
+      "tema": "crise de ansiedade",
+      "formato": "carrossel",
+      "titulo": "O que acontece no seu cerebro.",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Crise de ansiedade",
+          "title": "O que acontece no seu cerebro.",
+          "text": []
+        },
+        {
+          "cls": "dark",
+          "kicker": "Neurobiologia",
+          "text": [
+            "A amigdala dispara o alarme. O cortisol inunda o sangue.",
+            "O pre-frontal, responsavel pelo pensamento racional, vai offline."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Reenquadramento",
+          "text": [
+            "Nao e fraqueza. E biologia.",
+            "Conhecer esse mecanismo e o primeiro passo para nao ser dominada por ele."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "Conhecer esse mecanismo e o primeiro passo para nao ser dominada por ele.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-25",
+      "tema": "esgotamento emocional",
+      "formato": "carrossel",
+      "titulo": "Sinais de que voce precisa parar antes que o corpo te force.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Esgotamento",
+          "title": "Sinais de que voce precisa parar antes que o corpo te force.",
+          "text": []
+        },
+        {
+          "cls": "light",
+          "kicker": "Observe esses sinais",
+          "text": [
+            "Irritabilidade sem motivo. Dificuldade para se concentrar. Nada parece prazeroso.",
+            "Acordar cansada mesmo depois de dormir tambem pode ser esgotamento emocional."
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": null,
+      "status": "pendente"
+    },
+    {
+      "id": "dia-26",
+      "tema": "mindfulness",
+      "formato": "carrossel",
+      "titulo": "Nao e esvaziar a mente.",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Mindfulness",
+          "title": "Nao e esvaziar a mente.",
+          "text": [
+            "E observar o que passa por ela sem se perder."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Ponto central",
+          "text": [
+            "Voce nao precisa parar de pensar.",
+            "Precisa aprender a nao reagir a cada pensamento como se fosse uma ordem."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Comeco possivel",
+          "text": [
+            "Comece com 5 minutos. Respire. Observe. Volte quando a mente fugir.",
+            "<span class=\"hl\">Esse voltar e o exercicio.</span>"
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "<span class=\"hl\">Esse voltar e o exercicio.</span>",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-27",
+      "tema": "depressao",
+      "formato": "carrossel",
+      "titulo": "Nao e tristeza.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Depressao",
+          "title": "Nao e tristeza.",
+          "text": [
+            "E a <span class=\"hl\">ausencia de sentir.</span>"
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Como muitas vezes aparece",
+          "text": [
+            "Quem esta deprimido nem sempre chora.",
+            "Pode estar entorpecido, sem alegria, prazer ou interesse por qualquer coisa."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Como acolher",
+          "text": [
+            "Se alguem que voce ama esta assim, troque \"anima-se\" por:",
+            "<span class=\"hl\">\"Eu estou aqui. Nao precisa fazer isso sozinho.\"</span>"
+          ]
+        }
+      ],
+      "objetivo": "identificacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "<span class=\"hl\">\"Eu estou aqui. Nao precisa fazer isso sozinho.\"</span>",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-28",
+      "tema": "dbt",
+      "formato": "carrossel",
+      "titulo": "Como funciona na pratica?",
+      "copy": [
+        {
+          "cls": "photo",
+          "bg": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "DBT",
+          "title": "Como funciona na pratica?",
+          "text": [
+            "Terapia Comportamental Dialetica."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Aceitacao e mudanca",
+          "text": [
+            "A DBT combina validacao do que voce sente com habilidades concretas para agir diferente, mesmo em emocao intensa."
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Base cientifica",
+          "text": [
+            "Baseada em evidencias, a DBT e amplamente usada no tratamento de ansiedade, depressao e instabilidade emocional."
+          ]
+        }
+      ],
+      "objetivo": "autoridade",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "Baseada em evidencias, a DBT e amplamente usada no tratamento de ansiedade, depressao e instabilidade emocional.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-29",
+      "tema": "culpa e arrependimento",
+      "formato": "carrossel",
+      "titulo": "Culpa x arrependimento.",
+      "copy": [
+        {
+          "cls": "dark quote",
+          "kicker": "Culpa",
+          "title": "Culpa x arrependimento.",
+          "text": [
+            "A diferenca importa mais do que parece."
+          ]
+        },
+        {
+          "cls": "light",
+          "kicker": "Duas mensagens",
+          "text": [
+            "Culpa diz: \"sou uma pessoa ruim\".",
+            "Arrependimento diz: \"fiz algo que nao quero repetir\"."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Nova leitura da historia",
+          "text": [
+            "Se voce carrega culpa antiga como identidade, e hora de revisitar essa historia.",
+            "Voce nao e o pior momento da sua vida."
+          ]
+        }
+      ],
+      "objetivo": "psicoeducacao",
+      "estilo_visual": "editorial acolhedor",
+      "CTA": "Voce nao e o pior momento da sua vida.",
+      "status": "pendente"
+    },
+    {
+      "id": "dia-30",
+      "tema": "proximo passo terapeutico",
+      "formato": "carrossel",
+      "titulo": "Voce chegou ate aqui.",
+      "copy": [
+        {
+          "cls": "photo quote",
+          "bg": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=1080&h=1350&q=80",
+          "kicker": "Fechamento",
+          "title": "Voce chegou ate aqui.",
+          "text": [
+            "Isso ja diz muito sobre quem voce e."
+          ]
+        },
+        {
+          "cls": "dark",
+          "kicker": "Reconhecimento",
+          "text": [
+            "Buscar se entender, reconhecer a propria dor e querer mudar nao e obvio.",
+            "A maioria foge. <span class=\"hl\">Voce ficou.</span>"
+          ]
+        },
+        {
+          "cls": "paper",
+          "kicker": "Proximo passo",
+          "text": [
+            "Se algum desses conteudos falou com voce, talvez seja hora de dar o proximo passo.",
+            "<span class=\"hl\">O link esta na bio. Eu te espero.</span>"
+          ]
+        }
+      ],
+      "objetivo": "CTA",
+      "estilo_visual": "neutro minimalista",
+      "CTA": "<span class=\"hl\">O link esta na bio. Eu te espero.</span>",
+      "status": "pendente"
+    }
+  ]
+}

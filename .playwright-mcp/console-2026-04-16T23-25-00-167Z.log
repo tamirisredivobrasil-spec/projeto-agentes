@@ -1,0 +1,11 @@
+[     715ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://www.instagram.com/psic.anaoliveira/:0
+[     716ms] [LOG] 
+%cEspere! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black; @ https://static.cdninstagram.com/rsrc.php/v4/yc/r/_hIdXQEonwy.js:242
+[     717ms] [LOG] 
+%cEste é um recurso de navegador voltado para desenvolvedores. Se uma pessoa disse para você copiar e colar algo aqui para ativar um recurso do Instagram ou "invadir" a conta de outra pessoa, isso é uma fraude e você dará a ela acesso à sua conta. font-family:helvetica; font-size:20px;  @ https://static.cdninstagram.com/rsrc.php/v4/yc/r/_hIdXQEonwy.js:242
+[     717ms] [LOG] 
+%cConsulte https://www.facebook.com/selfxss para mais informações. font-family:helvetica; font-size:20px;  @ https://static.cdninstagram.com/rsrc.php/v4/yc/r/_hIdXQEonwy.js:242
+[     717ms] [LOG] 
+%c  @ https://static.cdninstagram.com/rsrc.php/v4/yc/r/_hIdXQEonwy.js:242
+[    2012ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.instagram.com/graphql/query/?query_id=9957820854288654&user_id=46960228013&include_chaining=false&include_reel=true&include_suggested_users=false&include_logged_out_extras=true&include_live_status=false&include_highlight_reels=true:0
+[    3154ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.instagram.com/accounts/login/?next=%2Fpsic.anaoliveira%2F&source=omni_redirect:0

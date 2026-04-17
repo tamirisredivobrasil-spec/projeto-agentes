@@ -1,0 +1,41 @@
+squad_code: "psicologia-feed"
+purpose: "Criar conteúdo educacional e científico para Instagram Feed especializado em psicologia clínica com prática baseada em evidências, focando em pessoas com transtornos de ansiedade"
+domain: "content"
+
+company:
+  name: "Tamiris Redivo Aguiar - Psicóloga Clínica"
+  tone: "Acolhedor, humanizado, inspirador, profissional, empático"
+  products: "Atendimento psicológico clínico em TCC, especialidade em transtornos de ansiedade"
+
+language: "Português (Brasil)"
+
+context:
+  audience: "Pessoas com transtornos de ansiedade buscando ajuda"
+  platforms: "Instagram Feed (carrosséis e imagens estáticas)"
+  tone: "Educacional & Científico"
+
+tools_needed:
+  - "web_search"
+  - "web_fetch"
+
+investigation:
+  enabled: true
+  profiles:
+    - url: "https://www.instagram.com/monteirotassi/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://www.instagram.com/psic.anaoliveira/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://www.instagram.com/fernandalandeiro/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://www.instagram.com/psi.alyssa/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+    - url: "https://www.instagram.com/maduconcencio/"
+      platform: "instagram"
+      investigation_mode: "profile_3"
+
+target_formats:
+  - "instagram-feed"

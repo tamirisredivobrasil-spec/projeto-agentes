@@ -1,0 +1,40 @@
+{
+  "squad": "conteudo-psicologia",
+  "status": "completed",
+  "step": { "current": 6, "total": 6, "label": "publicacao" },
+  "agents": [
+    {
+      "id": "pesquisador",
+      "name": "Pesquisador",
+      "status": "done"
+    },
+    {
+      "id": "estrategista",
+      "name": "Estrategista",
+      "status": "done"
+    },
+    {
+      "id": "redator",
+      "name": "Redator",
+      "status": "done"
+    },
+    {
+      "id": "designer",
+      "name": "Designer",
+      "status": "done"
+    },
+    {
+      "id": "revisor",
+      "name": "Revisor",
+      "status": "done"
+    },
+    {
+      "id": "publisher",
+      "name": "Publisher",
+      "status": "done"
+    }
+  ],
+  "startedAt": "2026-04-16T22:38:00-03:00",
+  "completedAt": "2026-04-16T22:38:15-03:00",
+  "updatedAt": "2026-04-16T22:38:15-03:00"
+}

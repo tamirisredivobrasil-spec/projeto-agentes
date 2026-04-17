@@ -1,0 +1,7 @@
+agent_id,role,title,expertise,icon,priority
+pesquisador,Research Specialist,Pesquisador,Identificar dores reais e tendências,🔍,1
+estrategista,Strategy Architect,Estrategista,Transformar achados em conteúdo estratégico e retenção,🎯,2
+redator,Copy Specialist,Redator,Escrever conteúdo final com impacto e clareza,✍️,3
+designer,Visual Designer,Designer,Criar direção visual e estrutura de cena/cortes,🎨,4
+revisor,Quality Assurance,Revisor,Garantir clareza e alinhamento ético sem perder engajamento,✅,5
+publisher,Automation Agent,Publisher,Automatizar postagem no Instagram,📤,6

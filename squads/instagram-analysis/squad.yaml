@@ -1,0 +1,41 @@
+code: instagram-analysis
+name: "🔍 Instagram Content Strategy Analysis"
+description: "Investigação profunda de 5 perfis de psicólogas no Instagram para extrair padrões, estratégias e insights. Resultado: relatório estruturado com análise comparativa e recomendações para Tamiris Redivo."
+owner: "Tamiris"
+status: "ready"
+created: "2026-04-16"
+
+squad:
+  icon: 🔍
+  agents: 3
+  goal: "Analisar estratégias de conteúdo de psicólogas líderes no Instagram e compilar insights para marketing"
+
+skills:
+  - web_search
+  - web_fetch
+
+profiles:
+  - "@monteirotassi"
+  - "@psic.anaoliveira"
+  - "@fernandalandeiro"
+  - "@psi.alyssa"
+  - "@maduconcencio"
+
+pipeline:
+  steps:
+    - type: "investigation"
+      id: "investigate-profiles"
+      description: "Investigar conteúdo dos 5 perfis"
+    - type: "analysis"
+      id: "analyze-patterns"
+      description: "Extrair padrões e estratégias de cada perfil"
+    - type: "compilation"
+      id: "compile-report"
+      description: "Compilar análise comparativa e recomendações"
+
+tags:
+  - "marketing"
+  - "instagram"
+  - "psychology"
+  - "content-strategy"
+  - "competitive-analysis"

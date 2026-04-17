@@ -1,0 +1,23 @@
+# Configurações do Agente de Notícias
+nicho:
+  nome: "Psicologia Clínica - Tamiris Redivo"
+  palavras_chave:
+    primarias: [ansiedade, TCC, "terapia cognitivo", burnout, "saúde mental", DBT, depressão, psicologia]
+    secundarias: ["regulação emocional", mindfulness, neurociência, "transtorno de ansiedade", "pânico", "psicopatologia"]
+    excluir: [esporte, culinária, política, tecnologia, futebol, "Big Brother"]
+
+fontes_rss:
+  - nome: "Google News - Ansiedade"
+    url: "https://news.google.com/rss/search?q=ansiedade+psicologia&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+  - nome: "Google News - TCC"
+    url: "https://news.google.com/rss/search?q=terapia+cognitivo+comportamental&hl=pt-BR&gl=BR"
+  - nome: "PubMed - CBT"
+    url: "https://pubmed.ncbi.nlm.nih.gov/rss/search/?term=CBT+anxiety+2026&format=abstract"
+  - nome: "CFP"
+    url: "https://site.cfp.org.br/feed/"
+
+configuracoes:
+  min_relevancia_alerta: 8      # Nota mínima para mandar alerta imediato (0-10)
+  min_relevancia_resumo: 6      # Nota mínima para entrar no resumo diário
+  horario_resumo: "08:00"       # Horário para enviar o resumo diário
+  fuso_horario: "America/Sao_Paulo"

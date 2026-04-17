@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - separator [ref=e3]
+  - iframe [ref=e8]:
+    - generic [ref=f11e2]:
+      - generic [ref=f11e3]:
+        - checkbox "Não sou um robô" [ref=f11e7]
+        - generic [ref=f11e11]: Não sou um robô
+      - generic [ref=f11e15]: reCAPTCHA
+  - separator [ref=e9]
+  - generic [ref=e10]:
+    - text: Sobre esta página
+    - text: Nossos sistemas detectaram tráfego incomum na sua rede de computadores. Esta página verifica se é realmente você, e não um robô, que está enviando as solicitações.
+    - link "Por que isso aconteceu?" [ref=e11] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e12]:
+      - text: "Endereço IP: 179.127.64.29"
+      - text: "Hora: 2026-04-16T23:37:09Z"
+      - text: "URL: https://www.google.com/search?q=monteirotassi%20instagram%20psic%C3%B3loga&sei=pHLhacqVOrae5OUPxJTkiAQ"

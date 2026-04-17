@@ -1,0 +1,4 @@
+path,displayName,icon
+./agents/sherlock.agent.md,Sherlock,🔍
+./agents/analyzer.agent.md,Content Analyzer,🎯
+./agents/compiler.agent.md,Report Compiler,📊

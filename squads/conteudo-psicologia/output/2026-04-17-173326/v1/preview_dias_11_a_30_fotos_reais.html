@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview Dias 11 a 30 - Fotos Reais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root {
+    --bg-deep: #0f1412;
+    --bg-panel: rgba(255, 255, 255, 0.055);
+    --line: rgba(255, 255, 255, 0.09);
+    --cream: #f5efe6;
+    --sand: #dbc9b7;
+    --warm: #d2a07a;
+    --sage: #8fa18f;
+    --ink: #16201d;
+    --charcoal: #171717;
+    --stone: #e6e1da;
+    --mist: #f8f7f4;
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    --radius: 36px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(circle at top left, rgba(210, 160, 122, 0.16), transparent 26%),
+      radial-gradient(circle at top right, rgba(143, 161, 143, 0.16), transparent 24%),
+      linear-gradient(180deg, #0d1311 0%, #17211d 48%, #0f1613 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 18px 64px;
+  }
+
+  .toolbar {
+    width: min(1180px, 100%);
+    position: sticky;
+    top: 16px;
+    z-index: 100;
+    margin-bottom: 32px;
+    padding: 22px 24px;
+    border-radius: 28px;
+    background: rgba(245, 239, 230, 0.94);
+    color: #18201d;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(16px);
+  }
+
+  .toolbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .eyebrow {
+    margin: 0 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6b746f;
+    font-weight: 800;
+  }
+
+  .toolbar h1 {
+    margin: 0;
+    font-size: clamp(34px, 5vw, 50px);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+  }
+
+  .toolbar p {
+    margin: 10px 0 0;
+    max-width: 760px;
+    line-height: 1.5;
+    color: #53605a;
+    font-size: 14px;
+  }
+
+  button {
+    border: none;
+    border-radius: 999px;
+    padding: 15px 26px;
+    background: linear-gradient(135deg, #173027 0%, #315345 100%);
+    color: #fff;
+    font: 800 13px/1 'Manrope', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(24, 48, 40, 0.22);
+  }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+
+  #status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #66716b;
+  }
+
+  #feed {
+    width: min(1180px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .day-block {
+    padding: 24px;
+    border-radius: 30px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+  }
+
+  .day-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .day-label {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .day-style {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.76);
+    font-weight: 800;
+  }
+
+  .slides-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    transform: scale(0.24);
+    transform-origin: top left;
+    margin-right: -818px;
+    margin-bottom: -1022px;
+    box-shadow: var(--shadow);
+  }
+
+  .slide::after {
+    content: '';
+    position: absolute;
+    inset: 22px;
+    border-radius: calc(var(--radius) - 10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .slide > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .slide-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px;
+  }
+
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .tag {
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 17px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .index {
+    font-size: 20px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .slide-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 860px;
+    margin: auto 0;
+  }
+
+  .script {
+    font-family: 'Caveat', cursive;
+    font-size: 118px;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    max-width: 760px;
+  }
+
+  .kicker {
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 800;
+    max-width: 820px;
+  }
+
+  .title {
+    font-size: 82px;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    margin: 0;
+    max-width: 900px;
+  }
+
+  .text {
+    margin: 0;
+    max-width: 850px;
+    font-size: 50px;
+    line-height: 1.32;
+    font-weight: 600;
+  }
+
+  .text + .text {
+    margin-top: 18px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 18px;
+  }
+
+  .brand {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .brand-role {
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cta {
+    max-width: 320px;
+    font-size: 21px;
+    line-height: 1.45;
+    text-align: right;
+  }
+
+  .hl {
+    font-style: italic;
+  }
+
+  .style-1 {
+    background-size: cover;
+    background-position: center;
+    color: #fff9f2;
+  }
+
+  .style-1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(32, 20, 12, 0.18), rgba(32, 20, 12, 0.44) 48%, rgba(32, 20, 12, 0.82) 100%),
+      linear-gradient(135deg, rgba(111, 64, 36, 0.34), rgba(20, 30, 26, 0.16) 44%);
+  }
+
+  .style-1 .tag {
+    background: rgba(255, 245, 232, 0.14);
+    color: rgba(255, 249, 242, 0.84);
+  }
+
+  .style-1 .index,
+  .style-1 .kicker,
+  .style-1 .brand-role,
+  .style-1 .cta {
+    color: rgba(255, 249, 242, 0.74);
+  }
+
+  .style-1 .hl,
+  .style-1 .script {
+    color: #ffd7bb;
+  }
+
+  .style-1 .title.quote-title {
+    font-size: 98px;
+    max-width: 940px;
+  }
+
+  .style-2 {
+    color: #151515;
+    background:
+      radial-gradient(circle at top right, rgba(0, 0, 0, 0.06), transparent 24%),
+      linear-gradient(180deg, #fbfaf7 0%, #ebe7df 100%);
+  }
+
+  .style-2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    opacity: 0.5;
+  }
+
+  .style-2::after {
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .style-2.has-bg::before {
+    background:
+      linear-gradient(180deg, rgba(249, 248, 244, 0.88), rgba(235, 231, 223, 0.94)),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42));
+    backdrop-filter: grayscale(1);
+  }
+
+  .style-2.has-bg .bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1) contrast(0.92) brightness(1.03);
+    opacity: 0.18;
+    z-index: 0;
+  }
+
+  .style-2 .tag {
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.58);
+  }
+
+  .style-2 .index,
+  .style-2 .kicker,
+  .style-2 .brand-role,
+  .style-2 .cta {
+    color: rgba(0, 0, 0, 0.52);
+  }
+
+  .style-2 .script {
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    line-height: 1.24;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #607066;
+    max-width: none;
+  }
+
+  .style-2 .title {
+    font-size: 88px;
+    max-width: 900px;
+  }
+
+  .style-2 .text {
+    font-size: 48px;
+  }
+
+  .style-2 .hl {
+    color: #5c6c63;
+  }
+
+  .object-card {
+    position: absolute;
+    right: 76px;
+    top: 140px;
+    width: 270px;
+    height: 360px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(214, 209, 201, 0.9));
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09);
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .object-card::before {
+    content: '';
+    position: absolute;
+    inset: 22px;
+    border-radius: 20px;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02)),
+      repeating-linear-gradient(180deg, transparent 0 28px, rgba(0, 0, 0, 0.05) 28px 30px);
+  }
+
+  .object-card::after {
+    content: '';
+    position: absolute;
+    bottom: 58px;
+    right: 44px;
+    width: 110px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.24);
+    transform: rotate(-22deg);
+  }
+
+  @media (max-width: 900px) {
+    body { padding: 14px 12px 42px; }
+    .toolbar { top: 10px; border-radius: 22px; padding: 20px 18px; }
+    .day-block { padding: 18px; border-radius: 24px; }
+    .slides-row { gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="toolbar-top">
+    <div>
+      <p class="eyebrow">Conteúdo Psicologia</p>
+      <h1>Dias 11 a 30 com variação de design</h1>
+      <p>As copys foram mantidas. Este gerador agora alterna entre o estilo editorial acolhedor da marca e o estilo neutro minimalista, preservando clareza clínica e consistência visual.</p>
+    </div>
+    <button onclick="downloadAll()">Baixar todos os PNGs</button>
+  </div>
+  <div id="status">Pronto para exportar os posts mantendo o conteúdo original.</div>
+</div>
+
+<div id="feed"></div>
+
+<script>
+const brand = `
+  <div class="brand">
+    <div class="brand-name">@psitamiris.redivo</div>
+    <div class="brand-role">psicologia baseada em evidência</div>
+  </div>
+`;
+
+const photos = {
+  books: './assets/tcc_book.jpeg',
+  desk: './assets/portrait_dsm_black.jpeg',
+  hands: './assets/portrait_warm_2.jpeg',
+  coffee: './assets/portrait_warm_3.jpeg',
+  plant: './assets/office_corner_2.jpeg',
+  notebook: './assets/portrait_beige.jpeg',
+  therapy: './assets/reading_dsm.jpeg',
+  window: './assets/office_corner_1.jpeg',
+  calm: './assets/portrait_white.jpeg',
+  library: './assets/dsm_close_1.jpeg'
+};
+
+const posts = [
+  {
+    day: 11,
+    slides: [
+      {
+        cls: 'photo quote',
+        bg: photos.desk,
+        kicker: 'Ansiedade clinica',
+        title: 'Quando a ansiedade deixa de ser normal?',
+        text: [
+          'Sentir ansiedade e humano. Mas existe um ponto em que ela para de te proteger e comeca a te prender.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Entendendo o sinal',
+        text: [
+          'A ansiedade normal desaparece depois que a ameaca passa.',
+          'A ansiedade clinica fica. Ela antecipa perigos que ainda nao existem.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Ponto de observacao',
+        text: [
+          'Se o seu cerebro esta sempre em <span class="hl">modo alerta</span> mesmo quando tudo esta bem, esse e um sinal importante para buscar avaliacao.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 12,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Pergunta importante',
+        title: 'Sera que eu preciso mesmo de terapia?',
+        text: [
+          '<span class="hl">Veja na legenda.</span>'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Nao e preciso colapsar',
+        text: [
+          'Voce nao precisa estar em crise para ir a terapia.',
+          'Voce pode ir porque quer se entender melhor e parar de repetir os mesmos padroes.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Reenquadramento',
+        text: [
+          'A terapia nao e para quem esta quebrado.',
+          'E para quem quer parar de se machucar <span class="hl">sem perceber</span>.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 13,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.therapy,
+        kicker: 'Psicoeducacao',
+        title: 'Terapia nao e bate-papo.',
+        text: [
+          'E um processo estruturado de mudanca real.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Na TCC',
+        text: [
+          'Cada sessao tem um objetivo.',
+          'Nos identificamos os pensamentos automaticos que sabotam sua vida e os testamos na pratica.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Valor do processo',
+        text: [
+          'Voce nao paga para desabafar.',
+          'Voce paga para aprender a pensar e agir de forma diferente.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 14,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.books,
+        kicker: 'Humor persistente',
+        title: 'O que e distimia?',
+        text: [
+          'A depressao que muita gente nao reconhece.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Como aparece',
+        text: [
+          'A distimia e uma tristeza cronica e baixa.',
+          'Voce funciona, mas nao se sente viva. Ela rouba a cor de tudo.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Olhar clinico',
+        text: [
+          'Por ser discreta, ela pode durar anos sem diagnostico.',
+          'Se voce vive em modo baixo ha muito tempo, isso merece atencao.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 15,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Sono e emocao',
+        title: 'Dormir mal por uma semana ja altera sua regulacao emocional.',
+        text: []
+      },
+      {
+        cls: 'light',
+        kicker: 'Nao e preguica',
+        text: [
+          'Durante o sono, o cerebro processa memorias do dia e faz limpeza metabolica.',
+          'Privacao de sono e privacao de saude mental.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 16,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.notebook,
+        kicker: 'Autoimagem',
+        title: 'Sindrome do impostor.',
+        text: [
+          'Quando voce nao consegue acreditar no proprio merito.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Como ela fala',
+        text: [
+          'Voce conquista algo e pensa: "foi sorte".',
+          'Recebe um elogio e pensa: "se soubessem como eu sou de verdade..."'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Nome correto',
+        text: [
+          'A sindrome do impostor nao e humildade.',
+          'E um pensamento distorcido que te impede de ocupar o espaco que voce merece.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 17,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Relacoes',
+        title: 'Apego ansioso ou apego evitativo?',
+        text: [
+          'Por que voce atrai sempre o mesmo padrao.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Dois movimentos',
+        text: [
+          'Quem tem apego ansioso precisa de confirmacao constante.',
+          'Quem tem apego evitativo se afasta quando a intimidade aumenta.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Boa noticia',
+        text: [
+          'Esses padroes se formam cedo, mas <span class="hl">podem ser reescritos</span> com consciencia e processo terapeutico.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 18,
+    slides: [
+      {
+        cls: 'photo quote',
+        bg: photos.coffee,
+        kicker: 'Procrastinacao',
+        title: 'Por que voce procrastina mesmo querendo muito terminar?',
+        text: []
+      },
+      {
+        cls: 'dark',
+        kicker: 'Funcao emocional',
+        text: [
+          'Procrastinacao e uma estrategia de regulacao emocional.',
+          'Voce evita a tarefa para fugir do desconforto que ela gera.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Nova leitura',
+        text: [
+          'Nao e preguica. <span class="hl">E protecao.</span>',
+          'Quando voce entende isso, se trata com mais compaixao e consegue agir.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 19,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.hands,
+        kicker: 'Regulacao emocional',
+        title: 'Na pratica.',
+        text: [
+          'Tres estrategias baseadas em evidencias.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Passo 1',
+        text: [
+          '<span class="hl">Nomeie a emocao.</span> Dizer "estou com raiva" ja reduz a intensidade do que voce sente.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Passos 2 e 3',
+        text: [
+          '<span class="hl">Questione o pensamento.</span> Isso e fato ou interpretacao?',
+          '<span class="hl">Aja no corpo.</span> Respiracao lenta ativa o freio do sistema nervoso.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 20,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Limites',
+        title: 'Limite saudavel nao e frieza.',
+        text: [
+          'E <span class="hl">respeito por si mesmo.</span>'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Definicao simples',
+        text: [
+          'Limite e a linha entre o que te nutre e o que te esgota.',
+          'Dizer nao nao te torna egoista. Te torna alguem que se cuida.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Quando vem culpa',
+        text: [
+          'Se voce sente culpa toda vez que coloca um limite, essa culpa tem historia.',
+          '<span class="hl">E essa historia pode ser trabalhada.</span>'
+        ]
+      }
+    ]
+  },
+  {
+    day: 21,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.window,
+        kicker: 'Overthinking',
+        title: 'Como sair do loop?',
+        text: []
+      },
+      {
+        cls: 'dark',
+        kicker: 'O que acontece',
+        text: [
+          'A mente que pensa demais nao esta procurando solucoes.',
+          'Ela esta tentando controlar o que nao pode controlar.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Pergunta util',
+        text: [
+          'Quando perceber que esta em loop, pergunte:',
+          '"Existe uma acao que eu possa tomar agora?"'
+        ]
+      }
+    ]
+  },
+  {
+    day: 22,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Autorelacao',
+        title: 'Autocritica x autocompaixao.',
+        text: [
+          'Um te pune. O outro te transforma.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Comparacao',
+        text: [
+          'A autocritica diz: "que idiota, errei de novo".',
+          'A autocompaixao diz: "errei, isso doi, e eu posso aprender com isso".'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Mudanca real',
+        text: [
+          'Ser gentil consigo mesmo nao e se acomodar.',
+          'E criar as condicoes emocionais para <span class="hl">crescer de verdade</span>.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 23,
+    slides: [
+      {
+        cls: 'photo quote',
+        bg: photos.plant,
+        kicker: 'Relacao consigo',
+        title: 'O relacionamento que voce tem com voce define todos os outros.',
+        text: []
+      },
+      {
+        cls: 'light',
+        kicker: 'Peso no outro',
+        text: [
+          'Se voce nao se sente suficiente, vai buscar no outro a confirmacao de que existe.',
+          'Isso coloca um peso impossivel em qualquer relacao.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Direcao da terapia',
+        text: [
+          'A terapia construi uma relacao saudavel com a pessoa com quem voce mais vai conviver na vida:',
+          '<span class="hl">voce mesma.</span>'
+        ]
+      }
+    ]
+  },
+  {
+    day: 24,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.library,
+        kicker: 'Crise de ansiedade',
+        title: 'O que acontece no seu cerebro.',
+        text: []
+      },
+      {
+        cls: 'dark',
+        kicker: 'Neurobiologia',
+        text: [
+          'A amigdala dispara o alarme. O cortisol inunda o sangue.',
+          'O pre-frontal, responsavel pelo pensamento racional, vai offline.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Reenquadramento',
+        text: [
+          'Nao e fraqueza. E biologia.',
+          'Conhecer esse mecanismo e o primeiro passo para nao ser dominada por ele.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 25,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Esgotamento',
+        title: 'Sinais de que voce precisa parar antes que o corpo te force.',
+        text: []
+      },
+      {
+        cls: 'light',
+        kicker: 'Observe esses sinais',
+        text: [
+          'Irritabilidade sem motivo. Dificuldade para se concentrar. Nada parece prazeroso.',
+          'Acordar cansada mesmo depois de dormir tambem pode ser esgotamento emocional.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 26,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.calm,
+        kicker: 'Mindfulness',
+        title: 'Nao e esvaziar a mente.',
+        text: [
+          'E observar o que passa por ela sem se perder.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Ponto central',
+        text: [
+          'Voce nao precisa parar de pensar.',
+          'Precisa aprender a nao reagir a cada pensamento como se fosse uma ordem.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Comeco possivel',
+        text: [
+          'Comece com 5 minutos. Respire. Observe. Volte quando a mente fugir.',
+          '<span class="hl">Esse voltar e o exercicio.</span>'
+        ]
+      }
+    ]
+  },
+  {
+    day: 27,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Depressao',
+        title: 'Nao e tristeza.',
+        text: [
+          'E a <span class="hl">ausencia de sentir.</span>'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Como muitas vezes aparece',
+        text: [
+          'Quem esta deprimido nem sempre chora.',
+          'Pode estar entorpecido, sem alegria, prazer ou interesse por qualquer coisa.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Como acolher',
+        text: [
+          'Se alguem que voce ama esta assim, troque "anima-se" por:',
+          '<span class="hl">"Eu estou aqui. Nao precisa fazer isso sozinho."</span>'
+        ]
+      }
+    ]
+  },
+  {
+    day: 28,
+    slides: [
+      {
+        cls: 'photo',
+        bg: photos.books,
+        kicker: 'DBT',
+        title: 'Como funciona na pratica?',
+        text: [
+          'Terapia Comportamental Dialetica.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Aceitacao e mudanca',
+        text: [
+          'A DBT combina validacao do que voce sente com habilidades concretas para agir diferente, mesmo em emocao intensa.'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Base cientifica',
+        text: [
+          'Baseada em evidencias, a DBT e amplamente usada no tratamento de ansiedade, depressao e instabilidade emocional.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 29,
+    slides: [
+      {
+        cls: 'dark quote',
+        kicker: 'Culpa',
+        title: 'Culpa x arrependimento.',
+        text: [
+          'A diferenca importa mais do que parece.'
+        ]
+      },
+      {
+        cls: 'light',
+        kicker: 'Duas mensagens',
+        text: [
+          'Culpa diz: "sou uma pessoa ruim".',
+          'Arrependimento diz: "fiz algo que nao quero repetir".'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Nova leitura da historia',
+        text: [
+          'Se voce carrega culpa antiga como identidade, e hora de revisitar essa historia.',
+          'Voce nao e o pior momento da sua vida.'
+        ]
+      }
+    ]
+  },
+  {
+    day: 30,
+    slides: [
+      {
+        cls: 'photo quote',
+        bg: photos.window,
+        kicker: 'Fechamento',
+        title: 'Voce chegou ate aqui.',
+        text: [
+          'Isso ja diz muito sobre quem voce e.'
+        ]
+      },
+      {
+        cls: 'dark',
+        kicker: 'Reconhecimento',
+        text: [
+          'Buscar se entender, reconhecer a propria dor e querer mudar nao e obvio.',
+          'A maioria foge. <span class="hl">Voce ficou.</span>'
+        ]
+      },
+      {
+        cls: 'paper',
+        kicker: 'Proximo passo',
+        text: [
+          'Se algum desses conteudos falou com voce, talvez seja hora de dar o proximo passo.',
+          '<span class="hl">O link esta na bio. Eu te espero.</span>'
+        ]
+      }
+    ]
+  }
+];
+
+const feed = document.getElementById('feed');
+const PT_REPLACEMENTS = [
+  [/\bVoce\b/g, 'Você'],
+  [/\bvoce\b/g, 'você'],
+  [/\bnao\b/g, 'não'],
+  [/\bNao\b/g, 'Não'],
+  [/\btambem\b/g, 'também'],
+  [/\bja\b/g, 'já'],
+  [/\balguem\b/g, 'alguém'],
+  [/\btecnica\b/g, 'técnica'],
+  [/\btecnico\b/g, 'técnico'],
+  [/\bclinica\b/g, 'clínica'],
+  [/\bclinico\b/g, 'clínico'],
+  [/\bevidencia\b/g, 'evidência'],
+  [/\bEvidencia\b/g, 'Evidência'],
+  [/\bevidencias\b/g, 'evidências'],
+  [/\bpsicoeducacao\b/g, 'psicoeducação'],
+  [/\bidentificacao\b/g, 'identificação'],
+  [/\bemocao\b/g, 'emoção'],
+  [/\bemocoes\b/g, 'emoções'],
+  [/\bconstrui\b/g, 'constrói'],
+  [/\brelacao\b/g, 'relação'],
+  [/\brelacoes\b/g, 'relações'],
+  [/\bconfirmacao\b/g, 'confirmação'],
+  [/\bdepressao\b/g, 'depressão'],
+  [/\bameaca\b/g, 'ameaça'],
+  [/\batencao\b/g, 'atenção'],
+  [/\bpadrao\b/g, 'padrão'],
+  [/\bpadroes\b/g, 'padrões'],
+  [/\bproprio\b/g, 'próprio'],
+  [/\bpropria\b/g, 'própria'],
+  [/\bpossivel\b/g, 'possível'],
+  [/\bhistoria\b/g, 'história'],
+  [/\bobvio\b/g, 'óbvio']
+];
+
+function pt(text) {
+  return PT_REPLACEMENTS.reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), text);
+}
+
+function getPostStyle(postIndex) {
+  return postIndex % 2 === 0 ? 1 : 2;
+}
+
+function getStyleLabel(style) {
+  return style === 1 ? 'Estilo 1 - editorial da marca' : 'Estilo 2 - neutro minimalista';
+}
+
+function getStyleNote(style) {
+  return style === 1
+    ? 'Acolhimento, identificacao emocional e profundidade.'
+    : 'Clareza cognitiva, psicoeducacao e autoridade tecnica.';
+}
+
+function renderText(paragraphs) {
+  return paragraphs.map((paragraph) => `<p class="text">${pt(paragraph)}</p>`).join('');
+}
+
+posts.forEach((post, postIndex) => {
+  const style = getPostStyle(postIndex);
+
+  const block = document.createElement('section');
+  block.className = 'day-block';
+  block.innerHTML = `
+    <div class="day-meta">
+      <div>
+        <div class="day-label">Dia ${String(post.day).padStart(2, '0')}</div>
+      </div>
+      <div class="day-style">${pt(getStyleLabel(style))}</div>
+    </div>
+    <div class="slides-row" id="row-${post.day}"></div>
+  `;
+  feed.appendChild(block);
+
+  const row = document.getElementById(`row-${post.day}`);
+
+  post.slides.forEach((slide, index) => {
+    const article = document.createElement('article');
+    const slideClasses = [`slide`, `style-${style}`];
+    const hasBg = Boolean(slide.bg);
+    const isQuote = slide.cls.includes('quote');
+
+    if (style === 2 && hasBg) {
+      slideClasses.push('has-bg');
+    }
+
+    article.className = slideClasses.join(' ');
+    article.id = `slide-${post.day}-${index + 1}`;
+
+    const bgLayer = style === 2 && hasBg
+      ? `<div class="bg-layer" style="background-image:url('${slide.bg}')"></div>`
+      : '';
+
+    if (style === 1 && hasBg) {
+      article.style.backgroundImage = `url('${slide.bg}')`;
+    } else if (style === 1 && !hasBg) {
+      article.style.backgroundImage = `url('${photos.window}')`;
+    }
+
+    const script = style === 1
+      ? 'Acolher tambem e compreender.'
+      : slide.kicker || 'Psicoeducacao clinica';
+
+    const kicker = style === 1
+      ? (slide.kicker || 'Psicologia clinica')
+      : 'Clareza clinica';
+
+    const titleHtml = slide.title ? `<h2 class="title ${isQuote ? 'quote-title' : ''}">${pt(slide.title)}</h2>` : '';
+    const textHtml = slide.text && slide.text.length ? renderText(slide.text) : '';
+
+    article.innerHTML = `
+      ${bgLayer}
+      ${style === 2 ? '<div class="object-card"></div>' : ''}
+      <div class="slide-inner">
+        <div class="slide-header">
+          <span class="tag">${pt('Psicologia baseada em evidencia')}</span>
+          <span class="index">${String(index + 1).padStart(2, '0')} / ${String(post.slides.length).padStart(2, '0')}</span>
+        </div>
+        <div class="slide-copy">
+          <div class="script">${pt(script)}</div>
+          <div class="kicker">${pt(kicker)}</div>
+          ${titleHtml}
+          ${textHtml}
+        </div>
+        <div class="footer">
+          ${brand}
+          <div class="cta">${pt(getStyleNote(style))}</div>
+        </div>
+      </div>
+    `;
+
+    row.appendChild(article);
+  });
+});
+
+async function downloadAll() {
+  const status = document.getElementById('status');
+  const button = document.querySelector('button');
+  button.disabled = true;
+  await document.fonts.ready;
+
+  const total = posts.reduce((acc, post) => acc + post.slides.length, 0);
+  let count = 0;
+
+  for (const post of posts) {
+    for (let index = 0; index < post.slides.length; index++) {
+      count += 1;
+      status.innerText = `Exportando ${count} de ${total}... (Dia ${post.day}, slide ${index + 1})`;
+
+      const slide = document.getElementById(`slide-${post.day}-${index + 1}`);
+      slide.style.transform = 'none';
+      slide.style.marginRight = '0';
+      slide.style.marginBottom = '0';
+
+      const canvas = await html2canvas(slide, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: false,
+        backgroundColor: null
+      });
+
+      const link = document.createElement('a');
+      link.download = `Dia_${String(post.day).padStart(2, '0')}_Slide_${index + 1}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+
+      slide.style.transform = 'scale(0.24)';
+      slide.style.marginRight = '-818px';
+      slide.style.marginBottom = '-1022px';
+
+      await new Promise((resolve) => setTimeout(resolve, 650));
+    }
+  }
+
+  status.innerText = 'Exportação concluída.';
+  button.disabled = false;
+}
+</script>
+</body>
+</html>

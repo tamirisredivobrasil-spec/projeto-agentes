@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - separator [ref=e3]
+  - iframe [ref=e8]:
+    - generic [ref=f18e2]:
+      - generic [ref=f18e3]:
+        - checkbox "Não sou um robô" [ref=f18e7]
+        - generic [ref=f18e11]: Não sou um robô
+      - generic [ref=f18e15]: reCAPTCHA
+  - separator [ref=e9]
+  - generic [ref=e10]:
+    - text: Sobre esta página
+    - text: Nossos sistemas detectaram tráfego incomum na sua rede de computadores. Esta página verifica se é realmente você, e não um robô, que está enviando as solicitações.
+    - link "Por que isso aconteceu?" [ref=e11] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e12]:
+      - text: "Endereço IP: 179.127.64.29"
+      - text: "Hora: 2026-04-16T23:37:21Z"
+      - text: "URL: https://www.google.com/search?q=psic%C3%B3loga%20ansiedade%20instagram%20brasil%202026&sei=sHLhaerQC5285OUPpdSOmAc"

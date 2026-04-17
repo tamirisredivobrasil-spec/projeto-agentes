@@ -1,0 +1,221 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - button "Menu principal" [ref=e5] [cursor=pointer]:
+          - img [ref=e6]
+        - link "Trends" [ref=e10] [cursor=pointer]:
+          - /url: /home
+          - generic [ref=e12]: Trends
+      - generic [ref=e13]:
+        - generic [ref=e16]:
+          - button "Início" [pressed] [ref=e19]:
+            - generic: Início
+          - button "Explorar" [ref=e26]:
+            - generic: Explorar
+          - button "Em alta" [ref=e31]:
+            - generic: Em alta
+        - combobox "Selecionar país" [ref=e40] [cursor=pointer]:
+          - generic:
+            - generic: Brasil
+          - generic:
+            - img
+      - generic [ref=e43]:
+        - button "Google Apps" [ref=e47] [cursor=pointer]:
+          - img [ref=e48]
+        - link "Fazer login" [ref=e51] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://trends.google.com/trends&followup=https://trends.google.com/trends&ec=GAZAgAU
+  - generic [ref=e55]:
+    - generic:
+      - navigation
+    - generic [ref=e57]:
+      - main [ref=e58]:
+        - heading "Google Trends" [level=1] [ref=e59]
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - heading "o mundo Pesquisas em alta" [level=1] [ref=e360]:
+              - generic [ref=e65]:
+                - generic [ref=e66]: o mundo
+                - generic [ref=e67]: Brasil
+              - text: Pesquisas em alta
+            - generic [ref=e70]:
+              - generic [ref=e363]: Insira uma palavra-chave para ver se está em alta
+              - generic [ref=e71]:
+                - textbox "Pesquisar" [active] [ref=e78]: banco venezuela
+                - button "Explorar" [ref=e81] [cursor=pointer]:
+                  - generic [ref=e83]: Explorar
+              - generic [ref=e364]:
+                - text: ou confira o que está
+                - link "em alta agora" [ref=e365] [cursor=pointer]:
+                  - /url: ./trending?geo=BR
+          - generic [ref=e87]:
+            - heading "Por que a seção está em alta?" [level=2] [ref=e366]:
+              - text: Por que a seção
+              - text: está em alta?
+            - button "Pesquisar" [ref=e91] [cursor=pointer]:
+              - generic [ref=e94]: Pesquisar
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - img [ref=e99]
+            - heading "Mais detalhes" [level=2] [ref=e101]
+            - heading "Saiba mais sobre as questões e acontecimentos específicos selecionados pela equipe de dados do Google Trends." [level=3] [ref=e102]
+          - link "Jogos Olímpicos de Inverno 2026 Veja como as pessoas estão pesquisando sobre o evento esportivo" [ref=e108] [cursor=pointer]:
+            - /url: https://trends.withgoogle.com/trends/br/jogos-ol%C3%ADmpicos-de-inverno-2026/?hl=pt-BR
+            - generic [ref=e109]:
+              - generic [ref=e110]: Jogos Olímpicos de Inverno 2026
+              - generic [ref=e111]: Veja como as pessoas estão pesquisando sobre o evento esportivo
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - img [ref=e116]
+            - heading "Criado com o Google Trends" [level=2] [ref=e118]
+            - heading "Confira como o Google Trends está sendo usado no mundo todo nas redações, ONGs e muito mais." [level=3] [ref=e119]
+          - generic [ref=e120]:
+            - generic [ref=e122]:
+              - link "Os nomes mais pesquisados durante o Oscar 2026 Veja como a CNN Brasil usou os dados do Google Trends para analisar as pesquisas sobre o Oscar deste ano. Acesse Abre uma nova guia" [ref=e126] [cursor=pointer]:
+                - /url: https://journaliststudio.google.com/article/buscas-por-jessie-buckley-crescem-apos-vitoria-da-atriz-no-oscar-2026/
+                - generic [ref=e127]:
+                  - generic [ref=e128]:
+                    - generic [ref=e129]: Os nomes mais pesquisados durante o Oscar 2026
+                    - generic [ref=e130]: Veja como a CNN Brasil usou os dados do Google Trends para analisar as pesquisas sobre o Oscar deste ano.
+                  - generic "Acesse Abre uma nova guia" [ref=e131]:
+                    - generic [ref=e132]: arrow_forward
+                    - text: Acesse
+              - 'link "Procurando pássaros O que acontece quando você combina dados e pássaros? O projeto visual mais recente de Nadieh Bremer é seu trabalho mais ambicioso até agora: uma análise dos dados do Google Trends e da observação de pássaros nos Estados Unidos. Acesse Abre uma nova guia" [ref=e136] [cursor=pointer]':
+                - /url: https://searchingforbirds.visualcinnamon.com/
+                - generic [ref=e137]:
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: Procurando pássaros
+                    - generic [ref=e140]: "O que acontece quando você combina dados e pássaros? O projeto visual mais recente de Nadieh Bremer é seu trabalho mais ambicioso até agora: uma análise dos dados do Google Trends e da observação de pássaros nos Estados Unidos."
+                  - generic "Acesse Abre uma nova guia" [ref=e141]:
+                    - generic [ref=e142]: arrow_forward
+                    - text: Acesse
+              - link "Tendências na TV Veja o que está em alta no Google ao redor do mundo com nosso novo protetor de tela Acesse Abre uma nova guia" [ref=e146] [cursor=pointer]:
+                - /url: https://trends.google.com/tv/?rows=3&cols=4
+                - generic [ref=e147]:
+                  - generic [ref=e148]:
+                    - generic [ref=e149]: Tendências na TV
+                    - generic [ref=e150]: Veja o que está em alta no Google ao redor do mundo com nosso novo protetor de tela
+                  - generic "Acesse Abre uma nova guia" [ref=e151]:
+                    - generic [ref=e152]: arrow_forward
+                    - text: Acesse
+              - link "‪‪Visualização de dados do Google Trends‬‬ Este é nosso projeto de visualização de dados! Aqui, a equipe de dados do Trends trabalha com os melhores designers do mundo para contar histórias e deixar os resultados em código aberto. (em inglês) Acesse Abre uma nova guia" [ref=e156] [cursor=pointer]:
+                - /url: https://trends.withgoogle.com/trends/us/visualizing-google-trends-data/
+                - generic [ref=e157]:
+                  - generic [ref=e158]:
+                    - generic [ref=e159]: ‪‪Visualização de dados do Google Trends‬‬
+                    - generic [ref=e160]: Este é nosso projeto de visualização de dados! Aqui, a equipe de dados do Trends trabalha com os melhores designers do mundo para contar histórias e deixar os resultados em código aberto. (em inglês)
+                  - generic "Acesse Abre uma nova guia" [ref=e161]:
+                    - generic [ref=e162]: arrow_forward
+                    - text: Acesse
+              - link "Em alta agora de onde você está Veja o que está bombando no Google Trends na sua localização Acesse Abre uma nova guia" [ref=e166] [cursor=pointer]:
+                - /url: https://trends.google.com/trending
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e169]: Em alta agora de onde você está
+                    - generic [ref=e170]: Veja o que está bombando no Google Trends na sua localização
+                  - generic "Acesse Abre uma nova guia" [ref=e171]:
+                    - generic [ref=e172]: arrow_forward
+                    - text: Acesse
+              - link "Conheça \"The Shape of Dreams\" Uma análise visual das pesquisas do Google sobre a interpretação dos sonhos. (em inglês) Acesse Abre uma nova guia" [ref=e176] [cursor=pointer]:
+                - /url: https://the-shape-of-dreams.com/#/
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - generic [ref=e179]: Conheça "The Shape of Dreams"
+                    - generic [ref=e180]: Uma análise visual das pesquisas do Google sobre a interpretação dos sonhos. (em inglês)
+                  - generic "Acesse Abre uma nova guia" [ref=e181]:
+                    - generic [ref=e182]: arrow_forward
+                    - text: Acesse
+              - link "O que estamos pesquisando? Um ensaio gráfico das pesquisas em alta durante o dia, a tarde e a noite. (em inglês) Acesse Abre uma nova guia" [ref=e186] [cursor=pointer]:
+                - /url: https://searchingthe.world/
+                - generic [ref=e187]:
+                  - generic [ref=e188]:
+                    - generic [ref=e189]: O que estamos pesquisando?
+                    - generic [ref=e190]: Um ensaio gráfico das pesquisas em alta durante o dia, a tarde e a noite. (em inglês)
+                  - generic "Acesse Abre uma nova guia" [ref=e191]:
+                    - generic [ref=e192]: arrow_forward
+                    - text: Acesse
+              - link "Tracker semanal de atividade econômica da OCDE O tracker da Organização para a Cooperação e Desenvolvimento Econômico (OCDE) oferece uma estimativa do PIB semanal com base nos dados de pesquisa do Google Trends e no aprendizado de máquina (em inglês). Acesse Abre uma nova guia" [ref=e196] [cursor=pointer]:
+                - /url: https://www.oecd.org/economy/weekly-tracker-of-gdp-growth/
+                - generic [ref=e197]:
+                  - generic [ref=e198]:
+                    - generic [ref=e199]: Tracker semanal de atividade econômica da OCDE
+                    - generic [ref=e200]: O tracker da Organização para a Cooperação e Desenvolvimento Econômico (OCDE) oferece uma estimativa do PIB semanal com base nos dados de pesquisa do Google Trends e no aprendizado de máquina (em inglês).
+                  - generic "Acesse Abre uma nova guia" [ref=e201]:
+                    - generic [ref=e202]: arrow_forward
+                    - text: Acesse
+            - button "seguinte" [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: arrow_forward
+        - generic [ref=e206]:
+          - generic [ref=e207]:
+            - img [ref=e209]
+            - heading "Comece a usar o Google Trends" [level=2] [ref=e211]
+            - heading "Nunca usou o Google Trends? Consulte estes recursos para aprender o que ele faz e como pode ser usado." [level=3] [ref=e212]
+          - generic [ref=e214]:
+            - link "Introdução aos dados do Google Trends Abre uma nova guia" [ref=e218] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=G76OomPTrE0&list=PLKoqnv2vTMUO8MUpCbVIiBaDZYrpNF8f-
+              - generic [ref=e220]: play_circle
+              - generic [ref=e221]: Introdução aos dados do Google Trends
+            - link "Tutorial do Google Trends Abre uma nova guia" [ref=e225] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=GXpGoUw4YUw&list=PLKoqnv2vTMUO8MUpCbVIiBaDZYrpNF8f-
+              - generic [ref=e227]: play_circle
+              - generic [ref=e228]: Tutorial do Google Trends
+            - link "Dicas avançadas do Google Trends Abre uma nova guia" [ref=e232] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=Kkd2PkbCdSc&list=PLKoqnv2vTMUO8MUpCbVIiBaDZYrpNF8f-
+              - generic [ref=e234]: play_circle
+              - generic [ref=e235]: Dicas avançadas do Google Trends
+            - link "Em alta Abre uma nova guia" [ref=e239] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=O-9G9k6ogdw&list=PLKoqnv2vTMUO8MUpCbVIiBaDZYrpNF8f-
+              - generic [ref=e241]: play_circle
+              - generic [ref=e242]: Em alta
+          - generic [ref=e244] [cursor=pointer]:
+            - generic [ref=e246]: arrow_forward
+            - generic [ref=e247]: Mais vídeos
+            - link "Mais vídeos" [ref=e248]:
+              - /url: https://youtube.com/playlist?list=PLKoqnv2vTMUO8MUpCbVIiBaDZYrpNF8f-&si=tbwC0S06XExH6UQq
+          - generic [ref=e250]:
+            - link "O que é o Google Trends? Abre uma nova guia" [ref=e254] [cursor=pointer]:
+              - /url: https://newsinitiative.withgoogle.com/resources/trainings/google-trends-lesson/
+              - generic [ref=e256]: O que é o Google Trends?
+            - link "Princípios básicos do Google Trends Abre uma nova guia" [ref=e260] [cursor=pointer]:
+              - /url: https://newsinitiative.withgoogle.com/resources/trainings/basics-of-google-trends/
+              - generic [ref=e262]: Princípios básicos do Google Trends
+            - link "Como interpretar os dados Abre uma nova guia" [ref=e266] [cursor=pointer]:
+              - /url: https://newsinitiative.withgoogle.com/resources/trainings/google-trends-understanding-the-data/
+              - generic [ref=e268]: Como interpretar os dados
+            - link "Google Trends avançado Abre uma nova guia" [ref=e272] [cursor=pointer]:
+              - /url: https://newsinitiative.withgoogle.com/resources/trainings/advanced-google-trends/
+              - generic [ref=e274]: Google Trends avançado
+      - contentinfo [ref=e278]:
+        - generic [ref=e279]:
+          - img "Google"
+          - generic [ref=e280]:
+            - link "Privacidade Abre uma nova guia" [ref=e281] [cursor=pointer]:
+              - /url: https://policies.google.com/privacy?hl=pt-BR
+              - text: Privacidade
+            - link "Termos Abre uma nova guia" [ref=e282] [cursor=pointer]:
+              - /url: https://policies.google.com/terms?hl=pt-BR
+              - text: Termos
+            - button "Enviar feedback" [ref=e283] [cursor=pointer]
+            - link "Sobre Abre uma nova guia" [ref=e284] [cursor=pointer]:
+              - /url: https://about.google?hl=pt-BR
+              - text: Sobre
+        - generic [ref=e285]:
+          - link "Ajuda Abre uma nova guia" [ref=e286] [cursor=pointer]:
+            - /url: https://support.google.com/trends?hl=pt-BR
+            - generic [ref=e287]: help
+            - generic [ref=e288]: Ajuda
+          - combobox "Selecionar idioma" [ref=e292] [cursor=pointer]:
+            - generic [ref=e293]: language
+            - generic:
+              - generic: Português (Brasil)‎
+            - generic:
+              - img
+      - generic [ref=e295]:
+        - generic [ref=e296]: Este site usa cookies do Google para prestar serviços e aprimorar a qualidade deles, além de analisar o tráfego
+        - generic [ref=e297]:
+          - generic [ref=e299] [cursor=pointer]:
+            - generic [ref=e300]: Saiba mais
+            - link "Saiba mais" [ref=e301]:
+              - /url: https://policies.google.com/technologies/cookies
+          - button "Entendi" [ref=e303] [cursor=pointer]:
+            - generic [ref=e305]: Entendi

@@ -1,0 +1,492 @@
+- generic [ref=e1]:
+  - generic [ref=e8]:
+    - generic [ref=e10]:
+      - link [ref=e13] [cursor=pointer]:
+        - /url: /
+        - img [ref=e16]
+      - generic [ref=e21]:
+        - link [ref=e23] [cursor=pointer]:
+          - /url: /accounts/login/?next=%2Fmonteirotassi%2Freel%2FDHq6987R1oX%2F&source=desktop_nav
+          - text: Entrar
+        - link [ref=e25] [cursor=pointer]:
+          - /url: /accounts/emailsignup/
+          - text: Cadastre-se
+    - main [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e29]:
+          - button [ref=e34]:
+            - group [ref=e45]:
+              - button [ref=e47] [cursor=pointer]:
+                - img [ref=e49]
+          - generic [ref=e52]:
+            - generic [ref=e54]:
+              - button [disabled] [ref=e56]:
+                - link [disabled] [ref=e58] [cursor=pointer]:
+                  - img [ref=e59]
+              - generic [ref=e61]:
+                - generic [ref=e62]:
+                  - generic [ref=e64]:
+                    - link [ref=e66] [cursor=pointer]:
+                      - /url: /monteirotassi/
+                      - generic [ref=e69]: monteirotassi
+                    - img [ref=e71]
+                  - generic [ref=e73]:
+                    - generic [ref=e75]: •
+                    - button [ref=e76] [cursor=pointer]: Seguir
+                - link [ref=e80] [cursor=pointer]:
+                  - /url: /reels/audio/648943741101736/
+                  - generic [ref=e83]: Áudio original
+              - button [ref=e86] [cursor=pointer]:
+                - img [ref=e89]
+            - separator [ref=e93]
+            - generic [ref=e95]:
+              - generic [ref=e97]:
+                - link [ref=e99] [cursor=pointer]:
+                  - /url: /monteirotassi/
+                  - img [ref=e100]
+                - generic [ref=e104]:
+                  - generic [ref=e105]:
+                    - link [ref=e106] [cursor=pointer]:
+                      - /url: /monteirotassi/
+                      - generic [ref=e108]:
+                        - generic [ref=e109]: monteirotassi
+                        - img [ref=e111]
+                    - time [ref=e114]: 55 sem
+                  - generic [ref=e115]: "“Tassi, por que você escolheu se especializar no tratamento da ansiedade?” Essa é uma pergunta que eu recebo com frequência. E a resposta é simples: Porque eu vivi isso. Na pele. No corpo. Na mente. E por muito tempo, no silêncio. Eu não estudei ansiedade só pelos livros. Eu estive no lugar de quem sente o coração disparar sem motivo. De quem acorda cansada, vive em estado de alerta, evita sair sozinha porque o medo tomou espaço demais. Descobrir que eu tinha transtorno de pânico e TAG foi um ponto de virada na minha vida. Mas, curiosamente, foi também o que me tornou uma terapeuta melhor. Mais humana. Mais consciente. Mais comprometida em oferecer, além de técnica, um cuidado verdadeiro. Hoje, cada paciente que entra no meu consultório carrega um pedaço da história que um dia foi minha. E eu vejo, em cada um deles, a possibilidade de reescrever essa história com mais leveza, autonomia e presença. Se você está nesse caminho, talvez ainda no início dele, eu só quero que saiba: Você não está sozinha. E sim, existe um caminho possível entre a ansiedade e a vida que você quer viver. Fica aqui comigo. Tem muito mais que eu quero te mostrar."
+              - button [ref=e117] [cursor=pointer]:
+                - img [ref=e119]
+              - generic [ref=e121]:
+                - generic [ref=e124]:
+                  - link [ref=e127] [cursor=pointer]:
+                    - /url: /monica.moniarte/
+                    - img [ref=e128]
+                  - generic [ref=e130]:
+                    - generic [ref=e132]:
+                      - generic [ref=e133]:
+                        - link [ref=e135] [cursor=pointer]:
+                          - /url: /monica.moniarte/
+                          - generic [ref=e138]: monica.moniarte
+                        - link [ref=e140] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18157547215443292/
+                          - time [ref=e141]: 1 d
+                      - generic [ref=e143]: E vamos falar sério, depois que passamos por isso sabemos o quão é importante ajudar alguém nesta situação. 👏👏👏👏
+                    - generic [ref=e144]:
+                      - button [ref=e145] [cursor=pointer]:
+                        - generic [ref=e146]: Curtir
+                      - button [ref=e147] [cursor=pointer]:
+                        - generic [ref=e149]: Responder
+                - generic [ref=e152]:
+                  - link [ref=e155] [cursor=pointer]:
+                    - /url: /eluane.dioliveira/
+                    - img [ref=e156]
+                  - generic [ref=e158]:
+                    - generic [ref=e160]:
+                      - generic [ref=e161]:
+                        - link [ref=e163] [cursor=pointer]:
+                          - /url: /eluane.dioliveira/
+                          - generic [ref=e166]: eluane.dioliveira
+                        - link [ref=e168] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18088958615071047/
+                          - time [ref=e169]: 13 sem
+                      - generic [ref=e171]: Preciso de ajuda
+                    - generic [ref=e172]:
+                      - button [ref=e173] [cursor=pointer]:
+                        - generic [ref=e174]: Curtir
+                      - button [ref=e175] [cursor=pointer]:
+                        - generic [ref=e177]: Responder
+                - generic [ref=e180]:
+                  - link [ref=e183] [cursor=pointer]:
+                    - /url: /lelynhavogt/
+                    - img [ref=e184]
+                  - generic [ref=e186]:
+                    - generic [ref=e188]:
+                      - generic [ref=e189]:
+                        - link [ref=e191] [cursor=pointer]:
+                          - /url: /lelynhavogt/
+                          - generic [ref=e194]: lelynhavogt
+                        - link [ref=e196] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18059968319299948/
+                          - time [ref=e197]: 16 sem
+                      - generic [ref=e199]: É horrível, meu maior desafio é a medicação por conta do pânico eu tenho medo de tomar medicação, são 8 meses sofrendo
+                    - generic [ref=e200]:
+                      - button [ref=e201] [cursor=pointer]:
+                        - generic [ref=e202]: Curtir
+                      - button [ref=e203] [cursor=pointer]:
+                        - generic [ref=e205]: Responder
+                - generic [ref=e208]:
+                  - link [ref=e211] [cursor=pointer]:
+                    - /url: /prof.rozii.mara/
+                    - img [ref=e212]
+                  - generic [ref=e214]:
+                    - generic [ref=e216]:
+                      - generic [ref=e217]:
+                        - link [ref=e219] [cursor=pointer]:
+                          - /url: /prof.rozii.mara/
+                          - generic [ref=e222]: prof.rozii.mara
+                        - link [ref=e224] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/17965024977007901/
+                          - time [ref=e225]: 16 sem
+                      - generic [ref=e227]: Me vi em suas palavras 😢
+                    - generic [ref=e228]:
+                      - button [ref=e229] [cursor=pointer]:
+                        - generic [ref=e230]: Curtir
+                      - button [ref=e231] [cursor=pointer]:
+                        - generic [ref=e233]: Responder
+                - generic [ref=e236]:
+                  - link [ref=e239] [cursor=pointer]:
+                    - /url: /silvadiger_/
+                    - img [ref=e240]
+                  - generic [ref=e242]:
+                    - generic [ref=e244]:
+                      - generic [ref=e245]:
+                        - link [ref=e247] [cursor=pointer]:
+                          - /url: /silvadiger_/
+                          - generic [ref=e250]: silvadiger_
+                        - link [ref=e252] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18049628708679456/
+                          - time [ref=e253]: 18 sem
+                      - generic [ref=e255]: Minha frequência chegou a 240....muito triste,muito ruim....
+                    - generic [ref=e256]:
+                      - button [ref=e257] [cursor=pointer]:
+                        - generic [ref=e259]: 1 curtida
+                      - button [ref=e260] [cursor=pointer]:
+                        - generic [ref=e262]: Responder
+                - generic [ref=e265]:
+                  - link [ref=e268] [cursor=pointer]:
+                    - /url: /taurinoterezinha/
+                    - img [ref=e269]
+                  - generic [ref=e271]:
+                    - generic [ref=e273]:
+                      - generic [ref=e274]:
+                        - link [ref=e276] [cursor=pointer]:
+                          - /url: /taurinoterezinha/
+                          - generic [ref=e279]: taurinoterezinha
+                        - link [ref=e281] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18269503351303112/
+                          - time [ref=e282]: 28 sem
+                      - generic [ref=e284]: 😢😢😢😢
+                    - generic [ref=e285]:
+                      - button [ref=e286] [cursor=pointer]:
+                        - generic [ref=e287]: Curtir
+                      - button [ref=e288] [cursor=pointer]:
+                        - generic [ref=e290]: Responder
+                - generic [ref=e293]:
+                  - link [ref=e296] [cursor=pointer]:
+                    - /url: /taurinoterezinha/
+                    - img [ref=e297]
+                  - generic [ref=e299]:
+                    - generic [ref=e301]:
+                      - generic [ref=e302]:
+                        - link [ref=e304] [cursor=pointer]:
+                          - /url: /taurinoterezinha/
+                          - generic [ref=e307]: taurinoterezinha
+                        - link [ref=e309] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18389852659124052/
+                          - time [ref=e310]: 28 sem
+                      - generic [ref=e312]: Maravilhosa 🙌
+                    - generic [ref=e313]:
+                      - button [ref=e314] [cursor=pointer]:
+                        - generic [ref=e315]: Curtir
+                      - button [ref=e316] [cursor=pointer]:
+                        - generic [ref=e318]: Responder
+                - generic [ref=e321]:
+                  - link [ref=e324] [cursor=pointer]:
+                    - /url: /flavia_pompeuu/
+                    - img [ref=e325]
+                  - generic [ref=e327]:
+                    - generic [ref=e329]:
+                      - generic [ref=e330]:
+                        - link [ref=e332] [cursor=pointer]:
+                          - /url: /flavia_pompeuu/
+                          - generic [ref=e335]: flavia_pompeuu
+                        - link [ref=e337] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18018098813594303/
+                          - time [ref=e338]: 28 sem
+                      - generic [ref=e340]: Que vídeo 🥹❤️🙏🏽
+                    - generic [ref=e341]:
+                      - button [ref=e342] [cursor=pointer]:
+                        - generic [ref=e343]: Curtir
+                      - button [ref=e344] [cursor=pointer]:
+                        - generic [ref=e346]: Responder
+                - generic [ref=e349]:
+                  - link [ref=e352] [cursor=pointer]:
+                    - /url: /buzzoni_ana/
+                    - img [ref=e353]
+                  - generic [ref=e355]:
+                    - generic [ref=e357]:
+                      - generic [ref=e358]:
+                        - link [ref=e360] [cursor=pointer]:
+                          - /url: /buzzoni_ana/
+                          - generic [ref=e363]: buzzoni_ana
+                        - link [ref=e365] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18506732848047432/
+                          - time [ref=e366]: 48 sem
+                      - generic [ref=e368]: Queria saber de onde é essa blusa maravilhosa😍
+                    - generic [ref=e369]:
+                      - button [ref=e370] [cursor=pointer]:
+                        - generic [ref=e372]: 1 curtida
+                      - button [ref=e373] [cursor=pointer]:
+                        - generic [ref=e375]: Responder
+                - generic [ref=e378]:
+                  - link [ref=e381] [cursor=pointer]:
+                    - /url: /juliaformagio.nutri/
+                    - img [ref=e382]
+                  - generic [ref=e384]:
+                    - generic [ref=e386]:
+                      - generic [ref=e387]:
+                        - link [ref=e389] [cursor=pointer]:
+                          - /url: /juliaformagio.nutri/
+                          - generic [ref=e392]: juliaformagio.nutri
+                        - link [ref=e394] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18293201293300747/
+                          - time [ref=e395]: 54 sem
+                      - generic [ref=e397]: ❤️❤️❤️
+                    - generic [ref=e398]:
+                      - button [ref=e399] [cursor=pointer]:
+                        - generic [ref=e400]: Curtir
+                      - button [ref=e401] [cursor=pointer]:
+                        - generic [ref=e403]: Responder
+                - generic [ref=e406]:
+                  - link [ref=e409] [cursor=pointer]:
+                    - /url: /biaoliveira.mkt/
+                    - img [ref=e410]
+                  - generic [ref=e412]:
+                    - generic [ref=e414]:
+                      - generic [ref=e415]:
+                        - link [ref=e417] [cursor=pointer]:
+                          - /url: /biaoliveira.mkt/
+                          - generic [ref=e420]: biaoliveira.mkt
+                        - link [ref=e422] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18044312753111369/
+                          - time [ref=e423]: 55 sem
+                      - generic [ref=e425]: Já vivi isso, e fui diagnosticada com agorafobia, me vi nesse vídeo. Mas nesse mesmo vídeo pude sentir também gratidão, pois hoje graças primeiramente a Deus, e segundo a essa psi incrível, pude retomar hábitos que eu não conseguia ter há muito tempo. Fiz terapia com a Tassi, super recomendo, pois ela foi incrível em todo os atendimentos, me senti acolhida. Obrigada pela sua partilha nesse vídeo Tassi, pois ajuda a muitos, mas acima de tudo, obrigada por viver tão lindamente o propósito que Deus te deu. 🤍
+                    - generic [ref=e426]:
+                      - button [ref=e427] [cursor=pointer]:
+                        - generic [ref=e428]: Curtir
+                      - button [ref=e429] [cursor=pointer]:
+                        - generic [ref=e431]: Responder
+                - generic [ref=e434]:
+                  - link [ref=e437] [cursor=pointer]:
+                    - /url: /sim.presentes.pra.mim/
+                    - img [ref=e438]
+                  - generic [ref=e440]:
+                    - generic [ref=e442]:
+                      - generic [ref=e443]:
+                        - link [ref=e445] [cursor=pointer]:
+                          - /url: /sim.presentes.pra.mim/
+                          - generic [ref=e448]: sim.presentes.pra.mim
+                        - link [ref=e450] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/17889983142210220/
+                          - time [ref=e451]: 55 sem
+                      - generic [ref=e453]: Me vi totalmente nas suas palavras, já vivi e ainda vivo exatamente isso, as mesmas coisas, os mesmos sintomas, é bom ter esperança que isso pode melhorar um dia.
+                    - generic [ref=e454]:
+                      - button [ref=e455] [cursor=pointer]:
+                        - generic [ref=e457]: 3 curtidas
+                      - button [ref=e458] [cursor=pointer]:
+                        - generic [ref=e460]: Responder
+                - generic [ref=e463]:
+                  - link [ref=e466] [cursor=pointer]:
+                    - /url: /elaines_reis/
+                    - img [ref=e467]
+                  - generic [ref=e469]:
+                    - generic [ref=e471]:
+                      - generic [ref=e472]:
+                        - link [ref=e474] [cursor=pointer]:
+                          - /url: /elaines_reis/
+                          - generic [ref=e477]: elaines_reis
+                        - link [ref=e479] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18008350691546227/
+                          - time [ref=e480]: 55 sem
+                      - generic [ref=e482]: Sei bem o que é isso! Já tive várias crises assim, meu pai por várias noites ficava comigo no PS, hoje desvenla....e terapia, não tive mais.
+                    - generic [ref=e483]:
+                      - button [ref=e484] [cursor=pointer]:
+                        - generic [ref=e486]: 2 curtidas
+                      - button [ref=e487] [cursor=pointer]:
+                        - generic [ref=e489]: Responder
+                - generic [ref=e492]:
+                  - link [ref=e495] [cursor=pointer]:
+                    - /url: /thaispomatti/
+                    - img [ref=e496]
+                  - generic [ref=e498]:
+                    - generic [ref=e500]:
+                      - generic [ref=e501]:
+                        - link [ref=e503] [cursor=pointer]:
+                          - /url: /thaispomatti/
+                          - generic [ref=e506]: thaispomatti
+                        - link [ref=e508] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18061418729503812/
+                          - time [ref=e509]: 55 sem
+                      - generic [ref=e511]: Você é uma inspiração, Tassi. Sua história nos ajuda a seguir em frente. Obrigada por estar comigo nessa caminhada.💛
+                    - generic [ref=e512]:
+                      - button [ref=e513] [cursor=pointer]:
+                        - generic [ref=e515]: 2 curtidas
+                      - button [ref=e516] [cursor=pointer]:
+                        - generic [ref=e518]: Responder
+                - generic [ref=e521]:
+                  - link [ref=e524] [cursor=pointer]:
+                    - /url: /suelyrsrs/
+                    - img [ref=e525]
+                  - generic [ref=e527]:
+                    - generic [ref=e529]:
+                      - generic [ref=e530]:
+                        - link [ref=e532] [cursor=pointer]:
+                          - /url: /suelyrsrs/
+                          - generic [ref=e535]: suelyrsrs
+                        - link [ref=e537] [cursor=pointer]:
+                          - /url: /p/DHq6987R1oX/c/18075348427785732/
+                          - time [ref=e538]: 55 sem
+                      - generic [ref=e540]: Horrível só sabe quem vive isso 😞
+                    - generic [ref=e541]:
+                      - button [ref=e542] [cursor=pointer]:
+                        - generic [ref=e544]: 1 curtida
+                      - button [ref=e545] [cursor=pointer]:
+                        - generic [ref=e547]: Responder
+                - progressbar [ref=e550]:
+                  - img [ref=e551]
+            - generic [ref=e564]:
+              - generic [ref=e565]:
+                - generic [ref=e566]:
+                  - button [ref=e569] [cursor=pointer]:
+                    - img [ref=e572]
+                  - button [ref=e574] [cursor=pointer]: "345"
+                  - button [ref=e576] [cursor=pointer]:
+                    - img [ref=e578]
+                  - button [ref=e580] [cursor=pointer]: "26"
+                  - button [ref=e581] [cursor=pointer]:
+                    - img [ref=e582]
+                - button [ref=e586] [cursor=pointer]:
+                  - img [ref=e588]
+              - link [ref=e592] [cursor=pointer]:
+                - /url: /monteirotassi/reel/DHq6987R1oX/
+                - time [ref=e594]: 26 de março de 2025
+            - generic [ref=e599]:
+              - link [ref=e600] [cursor=pointer]:
+                - /url: /accounts/login/?next=%2Fmonteirotassi%2Freel%2FDHq6987R1oX%2F&source=post_comment_input
+                - text: Entrar
+              - text: para curtir ou comentar.
+        - separator [ref=e602]
+        - generic [ref=e603]:
+          - generic [ref=e605]:
+            - text: Mais posts de
+            - link [ref=e606] [cursor=pointer]:
+              - /url: /monteirotassi/
+              - text: monteirotassi
+          - generic [ref=e609]:
+            - generic [ref=e610]:
+              - link [ref=e612] [cursor=pointer]:
+                - /url: /monteirotassi/p/DLa9Np5xgsn/
+                - img [ref=e615]
+                - generic:
+                  - generic:
+                    - img
+              - link [ref=e618] [cursor=pointer]:
+                - /url: /monteirotassi/p/DLCz8FfMC1E/
+                - img [ref=e621]
+                - generic:
+                  - generic:
+                    - img
+              - link [ref=e624] [cursor=pointer]:
+                - /url: /monteirotassi/p/DW94eRCFZiJ/
+                - img [ref=e627]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e629]:
+              - link [ref=e631] [cursor=pointer]:
+                - /url: /monteirotassi/p/DWzAoapFQ4C/
+                - img [ref=e634]
+                - generic:
+                  - generic:
+                    - img
+              - link [ref=e637] [cursor=pointer]:
+                - /url: /monteirotassi/p/DWl6HRwFYlt/
+                - img [ref=e640]
+                - generic:
+                  - generic:
+                    - img
+              - link [ref=e643] [cursor=pointer]:
+                - /url: /monteirotassi/reel/DWCyBMRggV9/
+                - img [ref=e646]
+                - generic:
+                  - generic:
+                    - img
+            - generic [ref=e648]:
+              - link [ref=e650] [cursor=pointer]:
+                - /url: /monteirotassi/p/DVuDlDPleBF/
+                - img [ref=e653]
+                - generic:
+                  - generic:
+                    - img
+              - link [ref=e656] [cursor=pointer]:
+                - /url: /monteirotassi/reel/DVrdGOuCAgY/
+                - img [ref=e659]
+                - generic:
+                  - generic:
+                    - img
+          - generic [ref=e662]:
+            - link [ref=e664] [cursor=pointer]:
+              - /url: /monteirotassi/
+              - generic [ref=e665]: Ver mais posts
+            - separator [ref=e666]
+    - contentinfo [ref=e667]:
+      - generic [ref=e668]:
+        - generic [ref=e670]:
+          - link [ref=e672] [cursor=pointer]:
+            - /url: https://about.meta.com/
+            - generic [ref=e673]: Meta
+          - link [ref=e675] [cursor=pointer]:
+            - /url: https://about.instagram.com/
+            - generic [ref=e676]: Sobre
+          - link [ref=e678] [cursor=pointer]:
+            - /url: https://about.instagram.com/blog/
+            - generic [ref=e679]: Blog
+          - link [ref=e681] [cursor=pointer]:
+            - /url: https://about.instagram.com/about-us/careers
+            - generic [ref=e682]: Carreiras
+          - link [ref=e684] [cursor=pointer]:
+            - /url: https://help.instagram.com/
+            - generic [ref=e685]: Ajuda
+          - link [ref=e687] [cursor=pointer]:
+            - /url: https://developers.facebook.com/docs/instagram
+            - generic [ref=e688]: API
+          - link [ref=e690] [cursor=pointer]:
+            - /url: /legal/privacy/
+            - generic [ref=e691]: Privacidade
+          - link [ref=e693] [cursor=pointer]:
+            - /url: /legal/terms/
+            - generic [ref=e694]: Termos
+          - link [ref=e696] [cursor=pointer]:
+            - /url: /explore/locations/
+            - generic [ref=e697]: Localizações
+          - link [ref=e699] [cursor=pointer]:
+            - /url: /web/lite/
+            - generic [ref=e700]: Instagram Lite
+          - link [ref=e702] [cursor=pointer]:
+            - /url: https://www.meta.ai/?utm_source=foa_web_footer
+            - generic [ref=e703]: Meta AI
+          - link [ref=e705] [cursor=pointer]:
+            - /url: https://www.threads.com/
+            - generic [ref=e706]: Threads
+          - link [ref=e708] [cursor=pointer]:
+            - /url: https://www.facebook.com/help/instagram/261704639352628
+            - generic [ref=e709]: Upload de contatos e não usuários
+          - link [ref=e711] [cursor=pointer]:
+            - /url: /accounts/meta_verified/?entrypoint=web_footer
+            - generic [ref=e712]: Meta Verified
+        - generic [ref=e713]:
+          - generic [ref=e714] [cursor=pointer]:
+            - generic [ref=e715]:
+              - generic [ref=e716]: Português (Brasil)
+              - img [ref=e719]
+            - combobox [ref=e721]
+          - generic [ref=e723]: © 2026 Instagram from Meta
+  - dialog [ref=e736]:
+    - generic [ref=e739]:
+      - generic [ref=e740]:
+        - status "Carregando..." [active] [ref=e743]
+        - generic [ref=e744]:
+          - status "Carregando..." [ref=e745]
+          - status "Carregando..." [ref=e746]
+      - generic [ref=e747]:
+        - status "Carregando..." [ref=e748]
+        - status "Carregando..." [ref=e749]

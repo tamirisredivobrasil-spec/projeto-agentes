@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dias 11 a 15 - Estilo Semana 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  body { background-color: #111; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+  .toolbar { background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; position: sticky; top: 20px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center; width: 80%; }
+  button { background-color: #7a6655; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+  button:hover { background-color: #5e4d3e; }
+  #feed { display: flex; flex-direction: column; gap: 60px; width: 100%; max-width: 1200px; }
+  .post-section { background: #2a2a2a; padding: 30px; border-radius: 15px; }
+  .post-title { color: #ddd; font-size: 22px; margin-bottom: 20px; font-weight: bold; }
+  .slide-container { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.24);
+    transform-origin: top left;
+    margin-bottom: -1026px;
+    margin-right: -820px;
+  }
+
+  .slide-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .slide-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.05) 0%,
+      rgba(0,0,0,0.15) 40%,
+      rgba(0,0,0,0.72) 100%
+    );
+    z-index: 1;
+  }
+
+  .slide-content {
+    position: absolute;
+    z-index: 2;
+    bottom: 220px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .slide-content .cursive {
+    font-family: 'Dancing Script', cursive;
+    font-size: 110px;
+    color: #fff;
+    line-height: 1.1;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    margin-bottom: 45px;
+    display: block;
+    font-weight: 700;
+  }
+
+  .slide-content .white-box {
+    background: #fff;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 28px 40px;
+    display: inline-block;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+  }
+
+  .slide-content .serif-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 105px;
+    color: #fff;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .slide-content .light-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+    display: block;
+    max-width: 900px;
+  }
+
+  .slide-content .big-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    position: absolute;
+    top: -60px;
+    right: -20px;
+    z-index: -1;
+  }
+
+  .slide-logo {
+    position: absolute;
+    z-index: 10;
+    bottom: 90px;
+    left: 80px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.92);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .slide-num {
+    position: absolute;
+    z-index: 10;
+    bottom: 90px;
+    right: 80px;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h2 style="margin-top:0;">Dias 11 a 15 - Estilo "Foto Elegante"</h2>
+  <button onclick="downloadAll()">Baixar Dias 11 a 15</button>
+  <p id="status" style="margin-top:10px; color:#666;">Mesmo padrão visual da Semana 1, com fotos novas e sem repetição entre slides.</p>
+</div>
+
+<div id="feed"></div>
+
+<script>
+  const P = [
+    'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1486946255434-2466348c2166?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1511174511562-5f97f4f4a340?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1080&h=1350&q=80',
+    'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1080&h=1350&q=80'
+  ];
+
+  const postsData = [
+    { day: 11, type: 'carousel',
+      slides: [
+        { photo: P[0],
+          content: `<span class="cursive">Quando a ansiedade<br>deixa de ser normal?</span>
+                    <span class="white-box">Sentir ansiedade e humano. Mas existe um ponto em que ela deixa de proteger e passa a prender.</span>`,
+          num: '01/03' },
+        { photo: P[1],
+          content: `<span class="white-box">A ansiedade normal desaparece depois que a ameaca passa.</span>
+                    <span class="white-box">A ansiedade clinica fica e antecipa perigos que ainda nao existem.</span>`,
+          num: '02/03' },
+        { photo: P[2],
+          content: `<span class="white-box">Se o seu cerebro vive em modo alerta mesmo quando tudo esta bem, isso merece avaliacao clinica.</span>`,
+          num: '03/03' },
+      ]
+    },
+    { day: 12, type: 'carousel',
+      slides: [
+        { photo: P[3],
+          content: `<span class="cursive">Sera que eu preciso<br>mesmo de terapia?</span>
+                    <span class="white-box">Voce nao precisa estar em crise para buscar ajuda.</span>`,
+          num: '01/03' },
+        { photo: P[4],
+          content: `<span class="white-box">Voce pode ir porque quer se entender melhor e parar de repetir os mesmos padroes.</span>`,
+          num: '02/03' },
+        { photo: P[5],
+          content: `<span class="white-box">A terapia nao e para quem esta quebrado.</span>
+                    <span class="white-box" style="background:#111;color:white;">E para quem quer parar de se machucar sem perceber.</span>`,
+          num: '03/03' },
+      ]
+    },
+    { day: 13, type: 'carousel',
+      slides: [
+        { photo: P[6],
+          content: `<span class="cursive">Terapia nao e<br>bate-papo</span>
+                    <span class="white-box">E um processo estruturado de mudanca real.</span>`,
+          num: '01/03' },
+        { photo: P[7],
+          content: `<span class="white-box">Na TCC, cada sessao tem um objetivo.</span>
+                    <span class="white-box">Pensamentos automaticos sao identificados e testados na pratica.</span>`,
+          num: '02/03' },
+        { photo: P[8],
+          content: `<span class="white-box">Voce nao paga para desabafar.</span>
+                    <span class="white-box" style="background:#111;color:white;">Voce paga para aprender a pensar e agir de forma diferente.</span>`,
+          num: '03/03' },
+      ]
+    },
+    { day: 14, type: 'carousel',
+      slides: [
+        { photo: P[9],
+          content: `<span class="cursive">O que e<br>distimia?</span>
+                    <span class="white-box">A depressao que muita gente nao reconhece.</span>`,
+          num: '01/03' },
+        { photo: P[10],
+          content: `<span class="white-box">A distimia e uma tristeza cronica e baixa.</span>
+                    <span class="white-box">Voce funciona, mas nao se sente viva. Ela rouba a cor de tudo.</span>`,
+          num: '02/03' },
+        { photo: P[11],
+          content: `<span class="white-box">Por ser discreta, ela pode durar anos sem diagnostico.</span>
+                    <span class="white-box" style="background:#111;color:white;">Se voce vive em modo baixo ha muito tempo, isso merece atencao.</span>`,
+          num: '03/03' },
+      ]
+    },
+    { day: 15, type: 'carousel',
+      slides: [
+        { photo: P[12],
+          content: `<span class="cursive">Dormir mal altera<br>sua regulacao emocional</span>
+                    <span class="white-box">Uma semana de sono ruim ja impacta a forma como voce sente e responde ao mundo.</span>`,
+          num: '01/02' },
+        { photo: P[13],
+          content: `<span class="white-box">Durante o sono, o cerebro processa memorias e faz limpeza metabolica.</span>
+                    <span class="white-box" style="background:#111;color:white;">Privacao de sono e privacao de saude mental.</span>`,
+          num: '02/02' },
+      ]
+    },
+  ];
+
+  const feedDiv = document.getElementById('feed');
+  const PT_REPLACEMENTS = [
+    [/\bVoce\b/g, 'Você'],
+    [/\bvoce\b/g, 'você'],
+    [/\bnao\b/g, 'não'],
+    [/\bNao\b/g, 'Não'],
+    [/\bsera\b/g, 'será'],
+    [/\bSera\b/g, 'Será'],
+    [/\be humano\b/g, 'é humano'],
+    [/\bE um processo\b/g, 'É um processo'],
+    [/\bE para quem\b/g, 'É para quem'],
+    [/\be para quem\b/g, 'é para quem'],
+    [/\bja\b/g, 'já'],
+    [/\bameaca\b/g, 'ameaça'],
+    [/\bclinica\b/g, 'clínica'],
+    [/\bcerebro\b/g, 'cérebro'],
+    [/\bavaliacao\b/g, 'avaliação'],
+    [/\bpadroes\b/g, 'padrões'],
+    [/\bdepressao\b/g, 'depressão'],
+    [/\batencao\b/g, 'atenção'],
+    [/\bregulacao\b/g, 'regulação'],
+    [/\bprivacao\b/g, 'privação'],
+    [/\bsaude\b/g, 'saúde'],
+    [/\bmemorias\b/g, 'memórias'],
+    [/\bmetabolica\b/g, 'metabólica']
+  ];
+
+  function pt(text) {
+    return PT_REPLACEMENTS.reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), text);
+  }
+
+  postsData.forEach(post => {
+    const section = document.createElement('div');
+    section.className = 'post-section';
+    section.innerHTML = `<div class="post-title">Dia ${String(post.day).padStart(2,'0')} - Carrossel (${post.slides.length} slides)</div><div class="slide-container" id="c${post.day}"></div>`;
+    feedDiv.appendChild(section);
+
+    const container = document.getElementById(`c${post.day}`);
+
+    post.slides.forEach((s, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.id = `slide-d${post.day}-s${idx + 1}`;
+
+      slide.innerHTML = `
+        <div class="slide-bg" style="background-image:url('${s.photo}')"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">${pt(s.content)}</div>
+        <div class="slide-logo">@psitamiris.redivo</div>
+        <div class="slide-num">${s.num}</div>
+      `;
+
+      container.appendChild(slide);
+    });
+  });
+
+  async function downloadAll() {
+    const status = document.getElementById('status');
+    const btn = document.querySelector('button');
+    btn.disabled = true;
+    await document.fonts.ready;
+
+    let total = postsData.reduce((a, p) => a + p.slides.length, 0);
+    let count = 0;
+
+    for (const post of postsData) {
+      for (let i = 0; i < post.slides.length; i++) {
+        count++;
+        status.innerText = `Exportando ${count}/${total} - Dia ${post.day}, Slide ${i + 1}...`;
+        const el = document.getElementById(`slide-d${post.day}-s${i + 1}`);
+
+        el.style.transform = 'none';
+        el.style.marginBottom = '0';
+        el.style.marginRight = '0';
+
+        const canvas = await html2canvas(el, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: false,
+          backgroundColor: null
+        });
+        const a = document.createElement('a');
+        a.download = `Dias11a15_Dia${String(post.day).padStart(2,'0')}_Slide${i + 1}.png`;
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+
+        el.style.transform = 'scale(0.24)';
+        el.style.marginBottom = '-1026px';
+        el.style.marginRight = '-820px';
+
+        await new Promise(r => setTimeout(r, 700));
+      }
+    }
+
+    status.innerText = 'Download concluído!';
+    btn.disabled = false;
+  }
+</script>
+</body>
+</html>

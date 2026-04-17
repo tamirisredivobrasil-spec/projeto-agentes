@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de PNG - Carrossel Psicologia</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  body {
+    background-color: #2c2c2c;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 0;
+  }
+  .toolbar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  button {
+    background-color: #8C998B;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background-color: #6d786d;
+  }
+  .slide-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .slide {
+    width: 1080px;
+    height: 1080px;
+    background-color: #FAF9F6;
+    color: #333333;
+    padding: 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide.dark {
+    background-color: #1a1a1a;
+    color: #FAF9F6;
+  }
+  .slide h1 {
+    font-size: 85px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+  }
+  .slide p {
+    font-size: 55px;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .logo {
+    position: absolute;
+    bottom: 80px;
+    left: 120px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #888;
+  }
+  .highlight {
+    color: #8C998B;
+  }
+  .dark .highlight {
+    color: #b5c4b4;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h2 style="margin-top:0;">Carrossel: Ansiedade de Alta Performance</h2>
+  <button onclick="downloadAll()">📥 Baixar Todos os Slides em PNG</button>
+  <p id="status" style="margin-bottom:0; color:#666; font-size:14px; margin-top:10px;"></p>
+</div>
+
+<div class="slide-container">
+  
+  <div class="slide" id="slide1">
+    <h1>Todo mundo acha que você é <span class="highlight">"forte"</span>, mas você não consegue descansar sem se sentir <span class="highlight">culpada(o)</span>?</h1>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide dark" id="slide2">
+    <p>Por fora, você é a pessoa que resolve tudo. Entrega os prazos, ajuda a família, mantém a rotina. Você parece o oposto de alguém com ansiedade.</p>
+    <div class="logo" style="color: #666;">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide" id="slide3">
+    <p>Mas por dentro, a história é outra. O seu motor não é a motivação, é o medo de falhar.</p>
+    <br>
+    <p>Bem-vinda(o) à <span class="highlight"><strong>Ansiedade de Alta Performance</strong></span>.</p>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide" id="slide4">
+    <p>O maior perigo dessa ansiedade é que ela é "invisível". Como você é muito produtiva(o), a sociedade aplaude o seu sintoma.</p>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide dark" id="slide5">
+    <p>E quando você finalmente decide deitar no sofá para descansar... a sua mente te pune.</p>
+    <br>
+    <p>Ela começa a listar tudo o que você <em>deveria</em> estar fazendo. É o famoso <span class="highlight"><strong>"Descanso Culposo"</strong></span>.</p>
+    <div class="logo" style="color: #666;">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide" id="slide6">
+    <p>Isso acontece porque você atrelou o seu valor pessoal ao seu nível de utilidade.</p>
+    <br>
+    <p><span class="highlight">"Se eu não produzo, não tenho valor."</span></p>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide" id="slide7">
+    <p>O primeiro passo não é "apenas relaxar". É aceitar o desconforto de não fazer nada.</p>
+    <br>
+    <p>Aprender que o descanso não é uma recompensa; é uma necessidade biológica.</p>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide dark" id="slide8">
+    <p>Você não precisa ser a heroína (ou o herói) que carrega o mundo nas costas o tempo todo. A força real também exige vulnerabilidade.</p>
+    <div class="logo" style="color: #666;">@psitamiris.redivo</div>
+  </div>
+
+  <div class="slide" id="slide9">
+    <h1>Desconstruir a necessidade de controle é um processo.</h1>
+    <p>A terapia é o espaço seguro para você tirar a armadura.</p>
+    <br>
+    <p><span class="highlight">👉🏾 Clique no link da bio para conversarmos.</span></p>
+    <div class="logo">@psitamiris.redivo</div>
+  </div>
+
+</div>
+
+<script>
+  async function downloadAll() {
+    const status = document.getElementById('status');
+    const buttons = document.getElementsByTagName('button')[0];
+    buttons.disabled = true;
+    
+    for(let i=1; i<=9; i++) {
+      status.innerText = `Gerando imagem ${i} de 9...`;
+      const slide = document.getElementById('slide' + i);
+      const canvas = await html2canvas(slide, { scale: 2 }); // Scale 2 for high quality
+      const link = document.createElement('a');
+      link.download = `slide_${i}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      await new Promise(r => setTimeout(r, 500)); // Pause to allow download
+    }
+    status.innerText = "Download concluído!";
+    buttons.disabled = false;
+  }
+</script>
+</body>
+</html>

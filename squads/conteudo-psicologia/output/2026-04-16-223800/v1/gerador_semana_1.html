@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Semana 1 — Estilo Dia 2 (Todos os dias)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  body { background-color: #111; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+  .toolbar { background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; position: sticky; top: 20px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center; width: 80%; }
+  button { background-color: #7a6655; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+  button:hover { background-color: #5e4d3e; }
+  #feed { display: flex; flex-direction: column; gap: 60px; width: 100%; max-width: 1200px; }
+  .post-section { background: #2a2a2a; padding: 30px; border-radius: 15px; }
+  .post-title { color: #ddd; font-size: 22px; margin-bottom: 20px; font-weight: bold; }
+  .slide-container { display: flex; flex-wrap: wrap; gap: 20px; }
+
+  /* ==== SLIDE BASE: Formato 4:5 (1080x1350) ==== */
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.24);
+    transform-origin: top left;
+    margin-bottom: -1026px;
+    margin-right: -820px;
+  }
+
+  /* ==== FOTO DE FUNDO ELEGANTE ==== */
+  .slide-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  /* ==== OVERLAY: Gradiente escuro na parte de baixo ==== */
+  .slide-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.05) 0%,
+      rgba(0,0,0,0.15) 40%,
+      rgba(0,0,0,0.72) 100%
+    );
+    z-index: 1;
+  }
+
+  /* ==== CONTEÚDO DO SLIDE ==== */
+  .slide-content {
+    position: absolute;
+    z-index: 2;
+    bottom: 220px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+
+  /* Estilo "Dia 2" — Título cursivo + caixinha branca */
+  .slide-content .cursive {
+    font-family: 'Dancing Script', cursive;
+    font-size: 110px;
+    color: #fff;
+    line-height: 1.1;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    margin-bottom: 45px;
+    display: block;
+    font-weight: 700;
+  }
+
+  .slide-content .white-box {
+    background: #fff;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 28px 40px;
+    display: inline-block;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin-bottom: 12px;
+  }
+
+  /* Variação: Título Playfair + Parágrafo */
+  .slide-content .serif-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 105px;
+    color: #fff;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  .slide-content .light-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+    display: block;
+    max-width: 900px;
+  }
+
+  /* Variação: Número grande + texto */
+  .slide-content .big-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    position: absolute;
+    top: -60px;
+    right: -20px;
+    z-index: -1;
+  }
+
+  /* ==== LOGO (Fixo, Não Corta) ==== */
+  .slide-logo {
+    position: absolute;
+    z-index: 10;
+    bottom: 90px;
+    left: 80px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.92);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Número do slide (carrossel) */
+  .slide-num {
+    position: absolute;
+    z-index: 10;
+    bottom: 90px;
+    right: 80px;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h2 style="margin-top:0;">Semana 1 — Estilo "Foto Elegante" (Dias 1 a 7)</h2>
+  <button onclick="downloadAll()">📥 Baixar Semana 1 (1080×1350)</button>
+  <p id="status" style="margin-top:10px; color:#666;">Consultórios, salas aconchegantes, estantes. Logo com fundo protegido. Formato 4:5.</p>
+</div>
+
+<div id="feed"></div>
+
+<script>
+  // 23 fotos MANUALMENTE VERIFICADAS (Sem erros, Sem repetição, Estética chique)
+  const P = [
+    'https://images.unsplash.com/photo-1637580681839-6e3ed197ca93?auto=format&fit=crop&w=1080&h=1350&q=80', // 0
+    'https://images.unsplash.com/photo-1637580682028-411974cac26b?auto=format&fit=crop&w=1080&h=1350&q=80', // 1
+    'https://images.unsplash.com/photo-1637580680895-534b307bcc29?auto=format&fit=crop&w=1080&h=1350&q=80', // 2
+    'https://images.unsplash.com/photo-1637580678290-29617636bdc7?auto=format&fit=crop&w=1080&h=1350&q=80', // 3
+    'https://images.unsplash.com/photo-1754037783933-c25ff9f68f87?auto=format&fit=crop&w=1080&h=1350&q=80', // 4
+    'https://images.unsplash.com/photo-1704686580778-680853cd8d29?auto=format&fit=crop&w=1080&h=1350&q=80', // 5
+    'https://images.unsplash.com/photo-1543248939-4296e1fea89b?auto=format&fit=crop&w=1080&h=1350&q=80', // 6
+    'https://images.unsplash.com/photo-1725783521817-3f37e54390a4?auto=format&fit=crop&w=1080&h=1350&q=80', // 7
+    'https://images.unsplash.com/photo-1633813122125-882b7cba1f7f?auto=format&fit=crop&w=1080&h=1350&q=80', // 8
+    'https://images.unsplash.com/photo-1617283410420-76fd3d910621?auto=format&fit=crop&w=1080&h=1350&q=80', // 9
+    'https://images.unsplash.com/photo-1493859923015-f05bc8960fa0?auto=format&fit=crop&w=1080&h=1350&q=80', // 10
+    'https://images.unsplash.com/photo-1632120377007-c2adc3017b1e?auto=format&fit=crop&w=1080&h=1350&q=80', // 11
+    'https://images.unsplash.com/photo-1560185009-dddeb820c7b7?auto=format&fit=crop&w=1080&h=1350&q=80', // 12
+    'https://images.unsplash.com/photo-1641232458416-feace752b346?auto=format&fit=crop&w=1080&h=1350&q=80', // 13
+    'https://images.unsplash.com/photo-1601617956235-c97e358d054f?auto=format&fit=crop&w=1080&h=1350&q=80', // 14
+    'https://images.unsplash.com/photo-1587135991058-8816b028691f?auto=format&fit=crop&w=1080&h=1350&q=80', // 15
+    'https://images.unsplash.com/photo-1687145183501-0c8e76bc2175?auto=format&fit=crop&w=1080&h=1350&q=80', // 16
+    'https://images.unsplash.com/photo-1638537690617-ebc561143de0?auto=format&fit=crop&w=1080&h=1350&q=80', // 17
+    'https://images.unsplash.com/photo-1648412498608-fa20000ccbc8?auto=format&fit=crop&w=1080&h=1350&q=80', // 18
+    'https://images.unsplash.com/photo-1772588627357-e735115b9620?auto=format&fit=crop&w=1080&h=1350&q=80', // 19
+    'https://images.unsplash.com/photo-1624498812392-9b2703e4b3ee?auto=format&fit=crop&w=1080&h=1350&q=80', // 20
+    'https://images.unsplash.com/photo-1569229761589-8838faca0b91?auto=format&fit=crop&w=1080&h=1350&q=80', // 21
+    'https://images.unsplash.com/photo-1763575648288-34cb92bbe67b?auto=format&fit=crop&w=1080&h=1350&q=80'  // 22
+  ];
+
+  // Dados dos posts — todos com "layout-cursive" (estilo Dia 2)
+  const postsData = [
+    // ── DIA 1: Carrossel 5 slides — Ansiedade de Alta Performance ──────────────
+    { day: 1, type: 'carousel',
+      slides: [
+        { photo: P[0],
+          content: `<span class="cursive">Ansiedade de<br>Alta Performance</span>
+                    <span class="white-box">O que ninguém vê por dentro de você.</span>`,
+          num: '01/05' },
+        { photo: P[1],
+          content: `<span class="white-box">Por fora, você é<br>a pessoa que resolve tudo.</span>`,
+          num: '02/05' },
+        { photo: P[2],
+          content: `<span class="white-box">Mas por dentro, o seu motor<br>não é motivação. É o medo de falhar.</span>`,
+          num: '03/05' },
+        { photo: P[3],
+          content: `<span class="white-box">O maior perigo: ela é<br>aplaudida pela sociedade.</span>`,
+          num: '04/05' },
+        { photo: P[4],
+          content: `<span class="white-box">A terapia te ajuda a tirar<br>essa armadura pesada.</span>
+                    <span class="white-box" style="background:#111;color:white;margin-top:12px;font-size:38px;">Agende sua avaliação ↗</span>`,
+          num: '05/05' },
+      ]
+    },
+    // ── DIA 2: Estático — Depressão Clínica ─────────────────────────────────────
+    { day: 2, type: 'static',
+      slides: [
+        { photo: P[5],
+          content: `<span class="cursive">Será que eu estou<br>em Depressão Clínica?</span>
+                    <span class="white-box">A diferença silenciosa da tristeza normal.</span>`,
+          num: null },
+      ]
+    },
+    // ── DIA 3: Carrossel 5 slides — Técnica TIPP (DBT) ──────────────────────────
+    { day: 3, type: 'carousel',
+      slides: [
+        { photo: P[6],
+          content: `<span class="cursive">Técnica TIPP</span>
+                    <span class="white-box">Como usar essa ferramenta da DBT<br>em crises de pânico?</span>`,
+          num: '01/05' },
+        { photo: P[7],
+          content: `<span class="white-box">T — Temperatura<br>Mergulhe o rosto em água gelada<br>e ative o reflexo de mergulho no corpo.</span>`,
+          num: '02/05' },
+        { photo: P[8],
+          content: `<span class="white-box">I — Exercício Intenso<br>Faça 20 polichinelos intensos.<br>Gaste a adrenalina do sangue agora.</span>`,
+          num: '03/05' },
+        { photo: P[9],
+          content: `<span class="white-box">P — Respiração Ritmada<br>Expire mais devagar do que inspira.<br>Isso ativa o freio do sistema nervoso.</span>`,
+          num: '04/05' },
+        { photo: P[10],
+          content: `<span class="white-box">Aprenda a regular o seu sistema<br>nervoso com suporte terapêutico.</span>
+                    <span class="white-box" style="background:#111;color:white;margin-top:12px;font-size:38px;">Agende na bio ↗</span>`,
+          num: '05/05' },
+      ]
+    },
+    // ── DIA 4: Estático — Perfeccionismo ────────────────────────────────────────
+    { day: 4, type: 'static',
+      slides: [
+        { photo: P[11],
+          content: `<span class="cursive">O Perfeccionismo</span>
+                    <span class="white-box">Como a sua cobrança excessiva afasta<br>as pessoas que você mais ama?</span>`,
+          num: null },
+      ]
+    },
+    // ── DIA 5: Carrossel 5 slides — Descanso Culposo ────────────────────────────
+    { day: 5, type: 'carousel',
+      slides: [
+        { photo: P[12],
+          content: `<span class="cursive">O Descanso Culposo</span>
+                    <span class="white-box">A crença de que sem produção,<br>você não tem valor.</span>`,
+          num: '01/05' },
+        { photo: P[13],
+          content: `<span class="white-box">Na infância, você aprendeu que<br>amor estava condicionado às boas notas.</span>`,
+          num: '02/05' },
+        { photo: P[14],
+          content: `<span class="white-box">Hoje, você não consegue<br>descansar por 10 min sem se punir.</span>`,
+          num: '03/05' },
+        { photo: P[15],
+          content: `<span class="white-box">Você é importante por existir.<br>Não por zerar uma lista de tarefas.</span>`,
+          num: '04/05' },
+        { photo: P[16],
+          content: `<span class="white-box">TCC para desconstruir<br>essa prisão mental.</span>
+                    <span class="white-box" style="background:#111;color:white;margin-top:12px;font-size:38px;">Link na bio ↗</span>`,
+          num: '05/05' },
+      ]
+    },
+    // ── DIA 6: Estático — Burnout ────────────────────────────────────────────────
+    { day: 6, type: 'static',
+      slides: [
+        { photo: P[17],
+          content: `<span class="cursive">Burnout</span>
+                    <span class="white-box">Não é só estresse. Conheça os 3 sinais<br>silenciosos da exaustão total.</span>
+                    <span class="white-box" style="background:#111;color:white;margin-top:12px;font-size:38px;">↓ Leia a legenda</span>`,
+          num: null },
+      ]
+    },
+    // ── DIA 7: Carrossel 5 slides — Sensibilidade Emocional (DBT) ───────────────
+    { day: 7, type: 'carousel',
+      slides: [
+        { photo: P[18],
+          content: `<span class="cursive">Você sente<br>demais?</span>
+                    <span class="white-box">Por que algumas pessoas sentem<br>o dobro da intensidade emocional?</span>`,
+          num: '01/05' },
+        { photo: P[19],
+          content: `<span class="white-box">Isso não é "frescura".<br>É o seu sistema de regulação<br>emocional atuando.</span>`,
+          num: '02/05' },
+        { photo: P[20],
+          content: `<span class="white-box">Pessoas com vulnerabilidade emocional<br>reagem mais rápido e demoram<br>mais para se acalmar.</span>`,
+          num: '03/05' },
+        { photo: P[21],
+          content: `<span class="white-box">A piora ocorre quando a sociedade<br>invalida o que você sente<br>desde a sua infância.</span>`,
+          num: '04/05' },
+        { photo: P[22],
+          content: `<span class="white-box">A DBT ajuda quem sente demais<br>a construir uma vida que valha a pena.</span>
+                    <span class="white-box" style="background:#111;color:white;margin-top:12px;font-size:38px;">Agende na bio ↗</span>`,
+          num: '05/05' },
+      ]
+    },
+  ];
+
+  // ── Render ────────────────────────────────────────────────────────────────────
+  const feedDiv = document.getElementById('feed');
+
+  postsData.forEach(post => {
+    const section = document.createElement('div');
+    section.className = 'post-section';
+    const label = post.type === 'static' ? 'Post Estático' : `Carrossel (${post.slides.length} slides)`;
+    section.innerHTML = `<div class="post-title">📅 Dia ${String(post.day).padStart(2,'0')} — ${label}</div><div class="slide-container" id="c${post.day}"></div>`;
+    feedDiv.appendChild(section);
+
+    const container = document.getElementById(`c${post.day}`);
+
+    post.slides.forEach((s, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.id = `slide-d${post.day}-s${idx+1}`;
+
+      slide.innerHTML = `
+        <div class="slide-bg" style="background-image:url('${s.photo}')"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content">${s.content}</div>
+        <div class="slide-logo">@psitamiris.redivo</div>
+        ${s.num ? `<div class="slide-num">${s.num}</div>` : ''}
+      `;
+      container.appendChild(slide);
+    });
+  });
+
+  // ── Download ──────────────────────────────────────────────────────────────────
+  async function downloadAll() {
+    const status = document.getElementById('status');
+    const btn = document.querySelector('button');
+    btn.disabled = true;
+
+    let total = postsData.reduce((a, p) => a + p.slides.length, 0);
+    let count = 0;
+
+    for (const post of postsData) {
+      for (let i = 0; i < post.slides.length; i++) {
+        count++;
+        status.innerText = `Exportando ${count}/${total} — Dia ${post.day}, Slide ${i+1}...`;
+        const el = document.getElementById(`slide-d${post.day}-s${i+1}`);
+
+        el.style.transform = 'none';
+        el.style.marginBottom = '0';
+        el.style.marginRight = '0';
+
+        const canvas = await html2canvas(el, { scale: 2, useCORS: true, allowTaint: true });
+        const a = document.createElement('a');
+        a.download = `Semana1_Dia${String(post.day).padStart(2,'0')}_Slide${i+1}.png`;
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+
+        el.style.transform = 'scale(0.24)';
+        el.style.marginBottom = '-1026px';
+        el.style.marginRight = '-820px';
+
+        await new Promise(r => setTimeout(r, 700));
+      }
+    }
+    status.innerText = '✅ Download concluído!';
+    btn.disabled = false;
+  }
+</script>
+</body>
+</html>

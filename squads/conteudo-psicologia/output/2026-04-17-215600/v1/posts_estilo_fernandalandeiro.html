@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts Estilo Fernanda Landeiro — @psitamiris.redivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root {
+    --preto: #111010;
+    --branco: #FAFAF8;
+    --rose: #C97D6B;
+    --rose-light: #E8B4A4;
+    --rose-dark: #9B5A4A;
+    --creme: #F4EDE3;
+    --creme-dark: #E8DDD0;
+    --marrom: #5C3D2E;
+    --marrom-light: #8B6355;
+    --cinza: #2A2A2A;
+
+    --radius: 32px;
+    --shadow: 0 32px 80px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #1a1008;
+    background-image:
+      radial-gradient(circle at top left, rgba(201,125,107,0.12) 0%, transparent 40%),
+      radial-gradient(circle at bottom right, rgba(92,61,46,0.15) 0%, transparent 40%);
+    min-height: 100vh;
+    color: var(--branco);
+    padding: 32px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* HEADER PAGE */
+  .page-header {
+    width: min(1200px, 100%);
+    padding: 40px 48px;
+    border-radius: 28px;
+    background: rgba(201,125,107,0.12);
+    border: 1px solid rgba(201,125,107,0.25);
+    margin-bottom: 48px;
+    backdrop-filter: blur(12px);
+  }
+
+  .page-header .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    color: var(--creme);
+    margin-bottom: 12px;
+  }
+
+  .page-header p {
+    color: rgba(244,237,227,0.65);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .page-header .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,125,107,0.2);
+    border: 1px solid rgba(201,125,107,0.35);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--rose-light);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  /* POSTS GRID */
+  .posts-grid {
+    width: min(1200px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  /* POST BLOCK */
+  .post-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .post-number {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(244,237,227,0.4);
+    font-weight: 700;
+  }
+
+  .post-topic {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--creme);
+    opacity: 0.9;
+  }
+
+  .post-tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .tag-rose { background: rgba(201,125,107,0.2); color: var(--rose-light); border: 1px solid rgba(201,125,107,0.3); }
+  .tag-cream { background: rgba(244,237,227,0.1); color: var(--creme-dark); border: 1px solid rgba(244,237,227,0.15); }
+
+  /* SLIDES ROW */
+  .slides-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* SLIDE — 1080x1350 scaled */
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    transform: scale(0.23);
+    transform-origin: top left;
+    margin-right: calc(-1080px * 0.77 + 12px);
+    margin-bottom: calc(-1350px * 0.77 + 12px);
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+  }
+
+  /* ════════════════════════════════════
+     TEMA A — FUNDO PRETO + ACCENT ROSÊ
+     ════════════════════════════════════ */
+  .tema-preto {
+    background: var(--preto);
+    color: var(--branco);
+  }
+
+  .tema-preto .watermark {
+    font-size: 22px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: rgba(255,255,255,0.22);
+  }
+
+  .tema-preto .hook-pill {
+    display: inline-block;
+    background: var(--rose);
+    color: var(--branco);
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .tema-preto .headline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 106px;
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--branco);
+  }
+
+  .tema-preto .headline em {
+    font-style: italic;
+    color: var(--rose-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 116px;
+  }
+
+  .tema-preto .body-text {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.88);
+    max-width: 900px;
+  }
+
+  .tema-preto .body-text strong {
+    color: var(--branco);
+    font-weight: 700;
+  }
+
+  .tema-preto .slide-num {
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    font-weight: 800;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+  }
+
+  .tema-preto .accent-line {
+    width: 60px;
+    height: 4px;
+    background: var(--rose);
+    border-radius: 2px;
+  }
+
+  .tema-preto .cta-box {
+    background: var(--rose);
+    border-radius: 24px;
+    padding: 54px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tema-preto .cta-box .cta-text {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--branco);
+    letter-spacing: -0.02em;
+  }
+
+  .tema-preto .cta-box .cta-handle {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.04em;
+  }
+
+  /* ════════════════════════════════════
+     TEMA B — FUNDO CREME + PRETO/MARROM
+     ════════════════════════════════════ */
+  .tema-creme {
+    background: var(--creme);
+    color: var(--preto);
+  }
+
+  .tema-creme .watermark {
+    font-size: 22px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: rgba(92,61,46,0.22);
+  }
+
+  .tema-creme .hook-pill {
+    display: inline-block;
+    background: var(--marrom);
+    color: var(--creme);
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .tema-creme .headline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 106px;
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--preto);
+  }
+
+  .tema-creme .headline em {
+    font-style: italic;
+    color: var(--rose-dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 116px;
+  }
+
+  .tema-creme .body-text {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: rgba(17,16,16,0.82);
+    max-width: 900px;
+  }
+
+  .tema-creme .body-text strong {
+    color: var(--preto);
+    font-weight: 700;
+  }
+
+  .tema-creme .slide-num {
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    font-weight: 800;
+    color: rgba(17,16,16,0.25);
+    text-transform: uppercase;
+  }
+
+  .tema-creme .accent-line {
+    width: 60px;
+    height: 4px;
+    background: var(--rose);
+    border-radius: 2px;
+  }
+
+  .tema-creme .cta-box {
+    background: var(--marrom);
+    border-radius: 24px;
+    padding: 54px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tema-creme .cta-box .cta-text {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--creme);
+    letter-spacing: -0.02em;
+  }
+
+  .tema-creme .cta-box .cta-handle {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(244,237,227,0.7);
+    letter-spacing: 0.04em;
+  }
+
+  /* INNER LAYOUT */
+  .slide-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 88px;
+  }
+
+  .slide-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .slide-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    flex: 1;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  .slide-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  /* DECORATIVE ELEMENTS */
+  .deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .dc-rose-large {
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(201,125,107,0.18) 0%, transparent 70%);
+    right: -200px; bottom: -200px;
+  }
+
+  .dc-marrom-large {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(92,61,46,0.15) 0%, transparent 70%);
+    left: -150px; top: -150px;
+  }
+
+  /* SEPARADOR ENTRE POSTS */
+  .divider {
+    width: min(1200px, 100%);
+    height: 1px;
+    background: rgba(201,125,107,0.15);
+    margin: 0;
+  }
+
+  /* DOWNLOAD TOOLBAR */
+  .toolbar {
+    width: min(1200px, 100%);
+    padding: 24px 32px;
+    border-radius: 20px;
+    background: rgba(244,237,227,0.07);
+    border: 1px solid rgba(201,125,107,0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .toolbar-info h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--creme);
+    margin-bottom: 4px;
+  }
+
+  .toolbar-info p {
+    font-size: 13px;
+    color: rgba(244,237,227,0.5);
+  }
+
+  .btn-download {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    background: var(--rose);
+    color: var(--branco);
+    font: 700 13px/1 'DM Sans', sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(201,125,107,0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(201,125,107,0.45);
+  }
+
+  #status { font-size: 13px; color: rgba(244,237,227,0.5); }
+</style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="eyebrow">Investigação Sherlock · Referência @fernandalandeiro</p>
+  <h1>Posts no estilo<br><em>texto direto</em></h1>
+  <p>Linguagem direta e provocativa, fundo escuro ou creme, accent em rosê. 5 carrosséis completos prontos para exportar. Paleta: preto · branco · marrom · creme · rosê.</p>
+  <span class="badge">✦ @psitamiris.redivo · CRP 06/128007</span>
+</div>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-info">
+    <h2>Exportar slides como PNG</h2>
+    <p>Clique em um slide para baixar em 1080×1350px</p>
+  </div>
+  <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+    <span id="status"></span>
+    <button class="btn-download" onclick="downloadAll()">↓ Baixar todos</button>
+  </div>
+</div>
+
+<div class="posts-grid">
+
+<!-- ═══════════════════════════════════════
+     POST 1 — ANSIEDADE NÃO É FRESCURA
+     ════════════════════════════════════ -->
+<div class="post-block">
+  <div class="post-meta">
+    <span class="post-number">Post 01 / 05</span>
+    <span class="post-topic">Ansiedade · Tema central</span>
+    <span class="post-tag tag-rose">Carrossel · 5 slides</span>
+  </div>
+  <div class="slides-row">
+
+    <!-- SLIDE 1 — CAPA -->
+    <div class="slide tema-preto" id="p1s1" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Fala que eu te escuto</span>
+          <span class="slide-num">01</span>
+        </div>
+        <div class="slide-middle">
+          <div class="accent-line"></div>
+          <div class="headline">
+            "Ansiedade<br>é frescura<br>
+            <em>minha."</em>
+          </div>
+          <div class="body-text">
+            Frase de pacientes.<br>Como responder isso?
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">psicóloga clínica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide tema-preto" id="p1s2" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Não é frescura.</span>
+          <span class="slide-num">02</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Ansiedade é um <strong>transtorno real.</strong><br><br>
+            Seu cérebro dispara alertas de perigo em situações que não são perigosas.<br><br>
+            Não porque você é fraco.<br>
+            Não porque você exagera.<br><br>
+            Porque seu <strong>sistema nervoso aprendeu</strong> a reagir assim.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">02 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide tema-preto" id="p1s3" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A ciência explica.</span>
+          <span class="slide-num">03</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Quando você tem ansiedade,<br><br>
+            sua amígdala — a parte do cérebro que detecta ameaças — <strong>entra em modo de sobrevivência</strong> sem motivo real.<br><br>
+            O coração dispara.<br>
+            A respiração acelera.<br>
+            O pensamento trava.<br><br>
+            Isso não é escolha. É <strong>neurobiologia.</strong>
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">03 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide tema-preto" id="p1s4" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">E o que fazer?</span>
+          <span class="slide-num">04</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            A TCC tem décadas de evidência:<br><br>
+            ✦ Identificar pensamentos automáticos<br>
+            ✦ Questionar a lógica do medo<br>
+            ✦ Reaprender a resposta do corpo<br><br>
+            Ansiedade <strong>tem tratamento.</strong><br>
+            E funciona.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">04 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 — CTA -->
+    <div class="slide tema-preto" id="p1s5" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="slide-num">05 / 05</span>
+          <span class="slide-num">encerra aqui ✦</span>
+        </div>
+        <div class="slide-middle">
+          <div class="cta-box">
+            <div class="cta-text">Se você se identificou,<br>o próximo passo é<br>pedir ajuda.</div>
+            <div class="cta-handle">@psitamiris.redivo</div>
+          </div>
+          <div class="body-text" style="font-size:36px;opacity:0.7;">
+            Atendimento online e presencial.<br>Presidente Prudente · SP
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">CRP 06/128007</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     POST 2 — VOCÊ NÃO É PREGUIÇOSO
+     ════════════════════════════════════ -->
+<div class="post-block">
+  <div class="post-meta">
+    <span class="post-number">Post 02 / 05</span>
+    <span class="post-topic">Autocobrança · Procrastinação</span>
+    <span class="post-tag tag-cream">Carrossel · 5 slides</span>
+  </div>
+  <div class="slides-row">
+
+    <!-- SLIDE 1 — CAPA CREME -->
+    <div class="slide tema-creme" id="p2s1" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Pra pensar</span>
+          <span class="slide-num">01</span>
+        </div>
+        <div class="slide-middle">
+          <div class="accent-line"></div>
+          <div class="headline">
+            "Sou muito<br>
+            <em>preguiçoso.</em>"
+          </div>
+          <div class="body-text">
+            Você realmente é?<br>Ou seu cérebro está<br>te protegendo do medo?
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">psicóloga clínica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 CREME -->
+    <div class="slide tema-creme" id="p2s2" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Não é preguiça.</span>
+          <span class="slide-num">02</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Procrastinação quase sempre é<br><strong>regulação emocional.</strong><br><br>
+            Você evita a tarefa porque ela<br>ativa medo de fracasso, julgamento<br>ou perfeccionismo.<br><br>
+            Seu cérebro faz isso para <strong>se proteger.</strong><br>
+            Não porque você é fraco.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">02 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 CREME -->
+    <div class="slide tema-creme" id="p2s3" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">O ciclo.</span>
+          <span class="slide-num">03</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Você evita → sente alívio momentâneo<br>→ se culpa → evita mais.<br><br>
+            Esse ciclo se retroalimenta.<br><br>
+            Não é falta de caráter.<br>É um <strong>padrão aprendido</strong><br>que pode ser mudado.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">03 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 CREME -->
+    <div class="slide tema-creme" id="p2s4" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">O que ajuda.</span>
+          <span class="slide-num">04</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Antes de agir, pergunte:<br><br>
+            <strong>"Que emoção estou evitando<br>ao adiar isso?"</strong><br><br>
+            Nomear a emoção já reduz<br>o poder que ela tem sobre você.<br><br>
+            É TCC na prática.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">04 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 CTA CREME -->
+    <div class="slide tema-creme" id="p2s5" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="slide-num">05 / 05</span>
+          <span class="slide-num">encerra aqui ✦</span>
+        </div>
+        <div class="slide-middle">
+          <div class="cta-box">
+            <div class="cta-text">Chega de se chamar<br>de preguiçoso.<br>Vamos trabalhar isso.</div>
+            <div class="cta-handle">@psitamiris.redivo</div>
+          </div>
+          <div class="body-text" style="font-size:36px;opacity:0.65;">
+            Atendimento online e presencial.<br>Presidente Prudente · SP
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">CRP 06/128007</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     POST 3 — PENSAMENTOS NÃO SÃO FATOS
+     ════════════════════════════════════ -->
+<div class="post-block">
+  <div class="post-meta">
+    <span class="post-number">Post 03 / 05</span>
+    <span class="post-topic">TCC · Pensamentos automáticos</span>
+    <span class="post-tag tag-rose">Carrossel · 5 slides</span>
+  </div>
+  <div class="slides-row">
+
+    <!-- SLIDE 1 PRETO -->
+    <div class="slide tema-preto" id="p3s1" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Isso muda tudo.</span>
+          <span class="slide-num">01</span>
+        </div>
+        <div class="slide-middle">
+          <div class="accent-line"></div>
+          <div class="headline">
+            Pensar não<br>é o mesmo<br>que <em>saber.</em>
+          </div>
+          <div class="body-text">
+            Seus pensamentos te mentem.<br>E você acredita neles.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">psicóloga clínica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide tema-preto" id="p3s2" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Exemplo real.</span>
+          <span class="slide-num">02</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Você manda uma mensagem.<br>
+            A pessoa demora pra responder.<br><br>
+            Seu cérebro cria:<br>
+            <strong>"Ela está me ignorando."<br>
+            "Fiz algo errado."<br>
+            "Ela me odeia."</strong><br><br>
+            Isso é um pensamento automático.<br>
+            Não é realidade.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">02 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide tema-preto" id="p3s3" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A distorção.</span>
+          <span class="slide-num">03</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Na TCC chamamos de<br><strong>distorções cognitivas:</strong><br><br>
+            Seu cérebro interpreta<br>situações de forma negativa,<br>catastrófica ou pessoal —<br>automaticamente, sem você perceber.<br><br>
+            E cada vez que acredita,<br>o padrão se <strong>fortalece.</strong>
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">03 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide tema-preto" id="p3s4" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A virada.</span>
+          <span class="slide-num">04</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Pergunte-se:<br><br>
+            <strong>"Qual a evidência<br>de que isso é verdade?"</strong><br><br>
+            Essa pergunta simples interrompe<br>o piloto automático do seu cérebro.<br><br>
+            É o início da mudança.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">04 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 CTA -->
+    <div class="slide tema-preto" id="p3s5" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="slide-num">05 / 05</span>
+          <span class="slide-num">encerra aqui ✦</span>
+        </div>
+        <div class="slide-middle">
+          <div class="cta-box">
+            <div class="cta-text">Quer aprender a<br>questionar seus<br>próprios pensamentos?</div>
+            <div class="cta-handle">@psitamiris.redivo</div>
+          </div>
+          <div class="body-text" style="font-size:36px;opacity:0.7;">
+            Agende sua primeira sessão.<br>Presencial e online.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">CRP 06/128007</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     POST 4 — VOCÊ NÃO TEM QUE ESTAR BEM
+     ════════════════════════════════════ -->
+<div class="post-block">
+  <div class="post-meta">
+    <span class="post-number">Post 04 / 05</span>
+    <span class="post-topic">Regulação emocional · Acolhimento</span>
+    <span class="post-tag tag-cream">Carrossel · 5 slides</span>
+  </div>
+  <div class="slides-row">
+
+    <!-- SLIDE 1 CREME -->
+    <div class="slide tema-creme" id="p4s1" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Permissão dada.</span>
+          <span class="slide-num">01</span>
+        </div>
+        <div class="slide-middle">
+          <div class="accent-line"></div>
+          <div class="headline">
+            Você não<br>tem que estar<br><em>bem.</em>
+          </div>
+          <div class="body-text">
+            Especialmente quando<br>não está.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">psicóloga clínica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 CREME -->
+    <div class="slide tema-creme" id="p4s2" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A pressão.</span>
+          <span class="slide-num">02</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            A sociedade ensina que<br>você precisa ser <strong>produtivo,</strong><br>estar bem, sorrir, performar.<br><br>
+            E quando não consegue,<br>sente que há algo <strong>errado com você.</strong><br><br>
+            Não há.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">02 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 CREME -->
+    <div class="slide tema-creme" id="p4s3" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Emoções são dados.</span>
+          <span class="slide-num">03</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Tristeza, raiva, medo —<br>não são <strong>fraquezas.</strong><br><br>
+            São informações<br>que seu sistema emocional<br>envia para você.<br><br>
+            Ignorá-las não as faz ir embora.<br>
+            <strong>Reconhecê-las</strong> é o começo da mudança.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">03 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 CREME -->
+    <div class="slide tema-creme" id="p4s4" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">O que funciona.</span>
+          <span class="slide-num">04</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Quando estiver mal, tente:<br><br>
+            <strong>Nomear a emoção.</strong><br>
+            "Estou sentindo ansiedade."<br><br>
+            Isso ativa o córtex pré-frontal<br>e reduz a intensidade emocional.<br><br>
+            Nomear já regula.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">04 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 CTA CREME -->
+    <div class="slide tema-creme" id="p4s5" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="slide-num">05 / 05</span>
+          <span class="slide-num">encerra aqui ✦</span>
+        </div>
+        <div class="slide-middle">
+          <div class="cta-box">
+            <div class="cta-text">Você não precisa<br>enfrentar isso<br>sozinho.</div>
+            <div class="cta-handle">@psitamiris.redivo</div>
+          </div>
+          <div class="body-text" style="font-size:36px;opacity:0.65;">
+            Atendimento humanizado.<br>Online e presencial.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">CRP 06/128007</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════
+     POST 5 — O PERFECCIONISMO TE PARALISA
+     ════════════════════════════════════ -->
+<div class="post-block">
+  <div class="post-meta">
+    <span class="post-number">Post 05 / 05</span>
+    <span class="post-topic">Perfeccionismo · Autocobrança</span>
+    <span class="post-tag tag-rose">Carrossel · 5 slides</span>
+  </div>
+  <div class="slides-row">
+
+    <!-- SLIDE 1 PRETO -->
+    <div class="slide tema-preto" id="p5s1" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">Verdade difícil.</span>
+          <span class="slide-num">01</span>
+        </div>
+        <div class="slide-middle">
+          <div class="accent-line"></div>
+          <div class="headline">
+            Perfeito<br>ou nada —<br><em>é medo.</em>
+          </div>
+          <div class="body-text">
+            Perfeccionismo não é qualidade.<br>É evitação disfarçada.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">psicóloga clínica</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide tema-preto" id="p5s2" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">O que é mesmo.</span>
+          <span class="slide-num">02</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Perfeccionismo é a crença de que<br>
+            <strong>errar = fracasso total.</strong><br><br>
+            Por isso você:<br>
+            Adia o que não vai sair perfeito.<br>
+            Não entrega o que já está bom.<br>
+            Se critica por qualquer deslize.<br><br>
+            É <strong>ansiedade com outro nome.</strong>
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">02 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide tema-preto" id="p5s3" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A raiz.</span>
+          <span class="slide-num">03</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            Muitas vezes vem da infância:<br><br>
+            Amor <strong>condicionado</strong> ao desempenho.<br>
+            Elogios só quando acertava.<br>
+            Punição quando errava.<br><br>
+            Seu cérebro aprendeu:<br>
+            <strong>"Só sou suficiente<br>quando sou perfeito."</strong>
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">03 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide tema-preto" id="p5s4" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-marrom-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="hook-pill">A saída.</span>
+          <span class="slide-num">04</span>
+        </div>
+        <div class="slide-middle">
+          <div class="body-text">
+            <strong>"Bom o suficiente"</strong><br>
+            é uma habilidade terapêutica real.<br><br>
+            Aprender a entregar, a tentar,<br>a errar sem se destruir —<br><br>
+            isso não é baixar o padrão.<br>
+            É recuperar sua <strong>liberdade.</strong>
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">04 / 05</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 CTA -->
+    <div class="slide tema-preto" id="p5s5" onclick="downloadSlide(this)">
+      <div class="deco-circle dc-rose-large"></div>
+      <div class="slide-inner">
+        <div class="slide-top">
+          <span class="slide-num">05 / 05</span>
+          <span class="slide-num">encerra aqui ✦</span>
+        </div>
+        <div class="slide-middle">
+          <div class="cta-box">
+            <div class="cta-text">Chega de se cobrar<br>por cada detalhe.<br>Isso tem solução.</div>
+            <div class="cta-handle">@psitamiris.redivo</div>
+          </div>
+          <div class="body-text" style="font-size:36px;opacity:0.7;">
+            Agende sua sessão.<br>Online e presencial.
+          </div>
+        </div>
+        <div class="slide-bottom">
+          <span class="watermark">TAMIRIS REDIVO</span>
+          <span class="slide-num">CRP 06/128007</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /posts-grid -->
+
+<script>
+async function downloadSlide(el) {
+  const id = el.id;
+  const status = document.getElementById('status');
+  status.textContent = 'Gerando ' + id + '...';
+  try {
+    const canvas = await html2canvas(el, {
+      scale: 1,
+      useCORS: true,
+      allowTaint: true,
+      backgroundColor: null,
+      width: 1080,
+      height: 1350,
+      logging: false
+    });
+    const link = document.createElement('a');
+    link.download = 'tamiris-' + id + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    status.textContent = '✓ ' + id + ' baixado!';
+  } catch(e) {
+    status.textContent = 'Erro: ' + e.message;
+  }
+}
+
+async function downloadAll() {
+  const slides = document.querySelectorAll('.slide');
+  const status = document.getElementById('status');
+  status.textContent = 'Baixando ' + slides.length + ' slides...';
+  for (let i = 0; i < slides.length; i++) {
+    status.textContent = `Gerando ${i+1}/${slides.length}...`;
+    await downloadSlide(slides[i]);
+    await new Promise(r => setTimeout(r, 400));
+  }
+  status.textContent = '✓ Todos os ' + slides.length + ' slides baixados!';
+}
+</script>
+
+</body>
+</html>

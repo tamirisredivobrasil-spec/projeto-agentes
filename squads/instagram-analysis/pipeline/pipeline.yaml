@@ -1,0 +1,111 @@
+---
+version: "1.0"
+title: "Instagram Content Strategy Investigation Pipeline"
+description: "Multi-stage pipeline for analyzing 5 competitive Instagram profiles"
+
+stages:
+  investigation:
+    name: "Content Investigation"
+    description: "Sherlock investigates all 5 profiles in parallel"
+    parallel: true
+    
+  analysis:
+    name: "Pattern Analysis"
+    description: "Analyzer extracts strategic patterns from each profile"
+    parallel: true
+    depends_on: investigation
+    
+  compilation:
+    name: "Final Report Compilation"
+    description: "Compiler synthesizes all findings into strategic report"
+    parallel: false
+    depends_on: analysis
+
+steps:
+  - id: "investigate-monteirotassi"
+    stage: investigation
+    agent: "sherlock"
+    execution: inline
+    input:
+      profile: "@monteirotassi"
+    output: "monteirotassi-raw-content.md"
+    
+  - id: "investigate-psic-anaoliveira"
+    stage: investigation
+    agent: "sherlock"
+    execution: inline
+    input:
+      profile: "@psic.anaoliveira"
+    output: "psic.anaoliveira-raw-content.md"
+    
+  - id: "investigate-fernandalandeiro"
+    stage: investigation
+    agent: "sherlock"
+    execution: inline
+    input:
+      profile: "@fernandalandeiro"
+    output: "fernandalandeiro-raw-content.md"
+    
+  - id: "investigate-psi-alyssa"
+    stage: investigation
+    agent: "sherlock"
+    execution: inline
+    input:
+      profile: "@psi.alyssa"
+    output: "psi.alyssa-raw-content.md"
+    
+  - id: "investigate-maduconcencio"
+    stage: investigation
+    agent: "sherlock"
+    execution: inline
+    input:
+      profile: "@maduconcencio"
+    output: "maduconcencio-raw-content.md"
+
+  - id: "analyze-monteirotassi"
+    stage: analysis
+    agent: "analyzer"
+    execution: inline
+    input: "monteirotassi-raw-content.md"
+    output: "monteirotassi-pattern-analysis.md"
+    
+  - id: "analyze-psic-anaoliveira"
+    stage: analysis
+    agent: "analyzer"
+    execution: inline
+    input: "psic.anaoliveira-raw-content.md"
+    output: "psic.anaoliveira-pattern-analysis.md"
+    
+  - id: "analyze-fernandalandeiro"
+    stage: analysis
+    agent: "analyzer"
+    execution: inline
+    input: "fernandalandeiro-raw-content.md"
+    output: "fernandalandeiro-pattern-analysis.md"
+    
+  - id: "analyze-psi-alyssa"
+    stage: analysis
+    agent: "analyzer"
+    execution: inline
+    input: "psi.alyssa-raw-content.md"
+    output: "psi.alyssa-pattern-analysis.md"
+    
+  - id: "analyze-maduconcencio"
+    stage: analysis
+    agent: "analyzer"
+    execution: inline
+    input: "maduconcencio-raw-content.md"
+    output: "maduconcencio-pattern-analysis.md"
+
+  - id: "compile-final-report"
+    stage: compilation
+    agent: "compiler"
+    execution: inline
+    inputs:
+      - "monteirotassi-pattern-analysis.md"
+      - "psic.anaoliveira-pattern-analysis.md"
+      - "fernandalandeiro-pattern-analysis.md"
+      - "psi.alyssa-pattern-analysis.md"
+      - "maduconcencio-pattern-analysis.md"
+    output: "final-strategic-report.md"
+    description: "Synthesize all analyses into comprehensive strategic report"

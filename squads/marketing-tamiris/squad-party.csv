@@ -1,0 +1,8 @@
+agent_id,role,title,expertise,icon,priority
+strategist,Strategy Architect,Estrategista de Conteúdo,Análise de tendências + definição de estratégia diária,🧠,1
+researcher,Research Specialist,Pesquisador,Busca de trending topics + análise de competitors,🔍,2
+humanizer,Content Humanizer,Especialista em Humanização,Aplicação de gatilhos mentais + criação de casos fictéticos,💛,3
+copywriter,Copy Specialist,Copywriter,Criação de copy persuasivo com hooks + storytelling,✍️,4
+designer,Visual Designer,Designer Visual,Design dos carrosseis + escolha/adaptação de fotos,🎨,5
+scriptwriter,Reel Scriptwriter,Roteirista de Reels,Criação de roteiros de reels com base em pesquisas,🎬,6
+publisher,Automation Agent,Publisher,Automação e publicação em Instagram + TikTok + Facebook,📤,7

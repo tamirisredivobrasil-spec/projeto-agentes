@@ -1,0 +1,63 @@
+- generic [active] [ref=e1]:
+  - region "Este site usa cookies do Google para prestar serviços e melhorar a qualidade deles, além de analisar o tráfego." [ref=e2]:
+    - generic [ref=e3]:
+      - text: Este site usa cookies do Google para prestar serviços e melhorar a qualidade deles, além de analisar o tráfego.
+      - generic [ref=e4]:
+        - link "Saiba mais" [ref=e5] [cursor=pointer]:
+          - /url: https://policies.google.com/technologies/cookies?hl=pt-BR
+        - button "Ok, entendi" [ref=e6] [cursor=pointer]
+  - generic [ref=e9]:
+    - banner [ref=e10]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - button [ref=e17] [cursor=pointer]:
+              - generic "Abrir menu" [ref=e18]:
+                - generic [ref=e19]:
+                  - img
+            - generic [ref=e20]:
+              - link [ref=e21] [cursor=pointer]:
+                - /url: /trends?geo=BR&hl=pt-BR
+              - generic [ref=e23]:
+                - link "Início" [ref=e25] [cursor=pointer]:
+                  - /url: /trends/?geo=BR&hl=pt-BR
+                  - text: Início
+                - link "Explorar" [ref=e27] [cursor=pointer]:
+                  - /url: /trends/explore?geo=BR&hl=pt-BR
+                  - text: Explorar
+                - link "Em alta" [ref=e30] [cursor=pointer]:
+                  - /url: /trends/trendingsearches/daily?geo=BR&hl=pt-BR
+                  - text: Em alta
+          - generic [ref=e31]:
+            - button "Compartilhar" [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]: share
+            - button "feedback" [ref=e35] [cursor=pointer]:
+              - generic [ref=e36]: feedback
+            - generic [ref=e40]:
+              - button "Google Apps" [ref=e44] [cursor=pointer]:
+                - img [ref=e45]
+              - link "Fazer login" [ref=e48] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://trends.google.com/trends/explore?q%3Dansiedade%26date%3Dnow%2B1-d%26geo%3DBR%26hl%3Dpt-BR&followup=https://trends.google.com/trends/explore?q%3Dansiedade%26date%3Dnow%2B1-d%26geo%3DBR%26hl%3Dpt-BR&hl=pt-BR&ec=GAZAPA
+        - generic [ref=e49]:
+          - generic [ref=e52]:
+            - button "Brasil" [ref=e55] [cursor=pointer]:
+              - generic:
+                - generic: Brasil
+                - generic: ▼
+            - 'listbox "Select time period: Ontem" [ref=e58]':
+              - generic [ref=e59]:
+                - generic [ref=e60]: Ontem
+                - generic [ref=e61]: ▼
+            - button "Todas as categorias" [ref=e64] [cursor=pointer]:
+              - generic:
+                - generic: Todas as categorias
+                - generic: ▼
+            - 'listbox "Select stories location: Pesquisa na Web" [ref=e65]':
+              - generic [ref=e66]:
+                - generic [ref=e67]: Pesquisa na Web
+                - generic [ref=e68]: ▼
+          - generic [ref=e70] [cursor=pointer]:
+            - generic "ansiedade" [ref=e72]:
+              - generic [ref=e74]: ansiedade
+            - generic [ref=e75]: Brasil, Ontem
+    - img [ref=e77]

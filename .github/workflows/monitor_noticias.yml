@@ -1,0 +1,46 @@
+name: Monitor de Notícias Psicologia
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Roda toda hora para alertas
+    - cron: '0 11 * * *' # Roda às 8h da manhã (Brasília) para o resumo diário
+  workflow_dispatch:      # Permite rodar manualmente
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: |
+          pip install -r squads/monitor-noticias/requirements.txt
+
+      - name: Executar Agente (Alerta ou Resumo)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CALLMEBOT_API_KEY: ${{ secrets.CALLMEBOT_API_KEY }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+        run: |
+          cd squads/monitor-noticias
+          if [ "${{ github.event.schedule }}" == "0 11 * * *" ]; then
+            python agent_noticias.py --summary
+          else
+            python agent_noticias.py
+          fi
+
+      - name: Salvar estado (noticias_vistas.json)
+        run: |
+          git config --global user.name 'News Bot'
+          git config --global user.email 'bot@opensquad.ai'
+          git add squads/monitor-noticias/noticias_vistas.json
+          git commit -m "Update seen news [skip ci]" || echo "No changes to commit"
+          git push

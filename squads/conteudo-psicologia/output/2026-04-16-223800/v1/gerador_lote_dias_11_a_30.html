@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gerador Visual EDITORIAL (Dias 11 a 30)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  body { background-color: #EFEBE7; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+  .toolbar { background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; position: sticky; top: 20px; z-index: 100; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; width: 80%; }
+  button { background-color: #5C564B; color: white; border: none; padding: 15px 30px; font-size: 18px; font-family: 'Inter'; border-radius: 50px; cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+  button:hover { background-color: #403b33; }
+  .post-section { width: 100%; margin-bottom: 50px; }
+  .post-title { color: #333; font-size: 24px; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+  .slide-container { display: flex; flex-wrap: wrap; gap: 20px; }
+  
+  .slide { width: 1080px; height: 1080px; background-color: #F8F5F2; color: #2D2D2D; padding: 120px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; transform: scale(0.3); transform-origin: top left; margin-bottom: -756px; margin-right: -756px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+  .slide.photo-bg { background-size: cover; background-position: center; }
+  .slide.photo-bg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(180deg, rgba(30,28,26,0.3) 0%, rgba(30,28,26,0.7) 100%); z-index: 1; }
+  .slide.photo-bg h1, .slide.photo-bg p, .slide.photo-bg .logo { position: relative; z-index: 2; color: #F8F5F2; }
+  
+  .slide h1 { font-family: 'Playfair Display', serif; font-size: 90px; line-height: 1.1; font-weight: 600; margin: 0 0 40px 0; letter-spacing: -1px; }
+  .slide p { font-size: 50px; line-height: 1.5; font-weight: 300; margin: 0; }
+  
+  .slide.note-style { background-color: #EFEBE7; }
+  .note-box { background: white; padding: 80px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); z-index: 2; position: relative; }
+  .slide.note-style h1 { font-size: 70px; color: #333; }
+  .slide.note-style p { font-size: 45px; color: #555; }
+  
+  .logo { position: absolute; bottom: 80px; left: 120px; font-size: 30px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; }
+  .slide.photo-bg .logo { color: rgba(255,255,255,0.7); }
+  .highlight { font-style: italic; color: #8A7B6E; }
+  .photo-bg .highlight { color: #D4C5B9; }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h2 style="margin-top:0; font-family: 'Playfair Display', serif;">Gerador Editorial (Dias 11 a 30)</h2>
+  <button onclick="downloadAll()">Baixar Fotos Únicas em PNG</button>
+  <p id="status" style="margin-bottom:0; color:#666; font-size:14px; margin-top:10px;">Estética Editorial Ativada. 20 Fotos Exclusivas e Diferentes geradas automaticamente.</p>
+</div>
+
+<div id="feed"></div>
+
+<script>
+  const postsData = [];
+  for (let i = 11; i <= 30; i++) {
+    postsData.push({
+      day: i, title: `Post do Dia ${i}`,
+      slides: [
+        { type: 'photo', text: `<h1>Aprofundando na mente e nas emoções. <span class="highlight">Dia ${i}</span></h1>` },
+        { type: i % 2 === 0 ? 'note' : 'light', text: i % 2 === 0 ? '<div class="note-box"><p>Conteúdo focado na Psicologia Baseada em Evidências e DBT.</p></div>' : '<h1>Autoconhecimento.</h1><p>Não há transformação sem compreensão dos próprios limites.</p>' }
+      ]
+    });
+  }
+
+  const feedDiv = document.getElementById('feed');
+  let photoIdOffset = 200; // Seed to ensure days 11-30 are completely different from 1-10
+
+  postsData.forEach(post => {
+    const section = document.createElement('div');
+    section.className = 'post-section';
+    section.innerHTML = `<div class="post-title">Dia ${String(post.day).padStart(2, '0')}</div><div class="slide-container" id="container-${post.day}"></div>`;
+    feedDiv.appendChild(section);
+    
+    const container = document.getElementById(`container-${post.day}`);
+    
+    post.slides.forEach((slideData, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.id = `img-day${post.day}-slide${idx+1}`;
+      
+      if(slideData.type === 'note') slide.classList.add('note-style');
+      if(slideData.type === 'photo') {
+        slide.classList.add('photo-bg');
+        // Unique aesthetic minimal photo for every single day
+        const imgUrl = `https://loremflickr.com/1080/1080/aesthetic,minimalist,coffee?lock=${photoIdOffset + post.day}`;
+        slide.style.backgroundImage = `url('${imgUrl}')`;
+      }
+      
+      slide.innerHTML = slideData.text + '<div class="logo">Psicóloga Tamiris Redivo</div>';
+      container.appendChild(slide);
+    });
+  });
+
+  async function downloadAll() {
+    const status = document.getElementById('status');
+    const buttons = document.getElementsByTagName('button')[0];
+    buttons.disabled = true;
+    
+    let totalSlides = postsData.reduce((acc, post) => acc + post.slides.length, 0);
+    let count = 0;
+
+    for(const post of postsData) {
+      for(let idx = 0; idx < post.slides.length; idx++) {
+        count++;
+        status.innerText = `Gerando imagem ${count} de ${totalSlides}... (Dia ${post.day})`;
+        const slideEl = document.getElementById(`img-day${post.day}-slide${idx+1}`);
+        
+        slideEl.style.transform = 'none';
+        slideEl.style.marginBottom = '0';
+        slideEl.style.marginRight = '0';
+
+        const canvas = await html2canvas(slideEl, { scale: 2, useCORS: true, allowTaint: true }); 
+        const link = document.createElement('a');
+        link.download = `Dia_${String(post.day).padStart(2, '0')}_Slide_${idx+1}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        
+        slideEl.style.transform = 'scale(0.3)';
+        slideEl.style.marginBottom = '-756px';
+        slideEl.style.marginRight = '-756px';
+
+        await new Promise(r => setTimeout(r, 600)); 
+      }
+    }
+    status.innerText = "Download concluído com sucesso!";
+    buttons.disabled = false;
+  }
+</script>
+</body>
+</html>

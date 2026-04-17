@@ -1,0 +1,29 @@
+name: Conteúdo Psicologia
+icon: 🧠
+status: active
+description: Squad especializada em criação de conteúdo para redes sociais no nicho de psicologia clínica. Foco em linguagem acessível, estratégica e prática baseada em evidências.
+
+pipeline:
+  - phase: "pesquisa"
+    description: "Identificar dores emocionais, tendências e padrões de comportamento."
+    agents: ["pesquisador"]
+    
+  - phase: "estrategia"
+    description: "Definir abordagem, gancho, promessa e estrutura do conteúdo."
+    agents: ["estrategista"]
+    
+  - phase: "redacao"
+    description: "Escrever o conteúdo final com clareza, impacto e fluidez."
+    agents: ["redator"]
+    
+  - phase: "design"
+    description: "Criar a direção visual, estilo, sugestões de cores e cortes."
+    agents: ["designer"]
+    
+  - phase: "revisao"
+    description: "Revisar o material final para garantir clareza, coerência e alinhamento ético."
+    agents: ["revisor"]
+    
+  - phase: "publicacao"
+    description: "Automatizar a postagem no Instagram."
+    agents: ["publisher"]

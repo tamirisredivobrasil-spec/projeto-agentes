@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "dia-11",
+      "day": 11,
+      "title": "Quando a ansiedade deixa de ser normal?",
+      "status": "pending",
+      "publish_on": "2026-04-18",
+      "images": [
+        "C:/caminho/para/Dia_11_Slide_1.png",
+        "C:/caminho/para/Dia_11_Slide_2.png",
+        "C:/caminho/para/Dia_11_Slide_3.png"
+      ],
+      "caption": "Legenda completa do post aqui.",
+      "location": "Presidente Prudente, SP"
+    },
+    {
+      "id": "dia-12",
+      "day": 12,
+      "title": "Sera que eu preciso mesmo de terapia?",
+      "status": "pending",
+      "publish_on": "2026-04-19",
+      "images": [
+        "C:/caminho/para/Dia_12_Slide_1.png",
+        "C:/caminho/para/Dia_12_Slide_2.png",
+        "C:/caminho/para/Dia_12_Slide_3.png"
+      ],
+      "caption": "Legenda completa do post aqui.",
+      "location": "Presidente Prudente, SP"
+    }
+  ]
+}

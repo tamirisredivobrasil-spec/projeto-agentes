@@ -1,0 +1,18 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - heading "imginn.com" [level=1] [ref=e5]
+      - heading "Executando verificação de segurança" [level=2] [ref=e6]
+      - paragraph [ref=e7]: Este site utiliza um serviço de segurança para proteção contra bots maliciosos. Esta página é exibida enquanto o site verifica se você não é um bot.
+  - contentinfo [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e12]:
+        - text: "Ray ID:"
+        - code [ref=e13]: 9ede5357fca45a30
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - text: Desempenho e segurança da
+          - link "Cloudflare" [ref=e16] [cursor=pointer]:
+            - /url: https://www.cloudflare.com?utm_source=challenge&utm_campaign=m
+        - link "Privacidade" [ref=e18] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/pt-br/privacypolicy/

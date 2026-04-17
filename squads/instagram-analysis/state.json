@@ -1,0 +1,44 @@
+{
+  "squad": "instagram-analysis",
+  "status": "idle",
+  "step": {
+    "current": 0,
+    "total": 11,
+    "label": ""
+  },
+  "agents": [
+    {
+      "id": "sherlock",
+      "name": "Sherlock",
+      "icon": "🔍",
+      "status": "idle",
+      "desk": {
+        "col": 1,
+        "row": 1
+      }
+    },
+    {
+      "id": "analyzer",
+      "name": "Content Analyzer",
+      "icon": "🎯",
+      "status": "idle",
+      "desk": {
+        "col": 2,
+        "row": 1
+      }
+    },
+    {
+      "id": "compiler",
+      "name": "Report Compiler",
+      "icon": "📊",
+      "status": "idle",
+      "desk": {
+        "col": 3,
+        "row": 1
+      }
+    }
+  ],
+  "handoff": null,
+  "startedAt": null,
+  "updatedAt": "2026-04-16T00:00:00Z"
+}

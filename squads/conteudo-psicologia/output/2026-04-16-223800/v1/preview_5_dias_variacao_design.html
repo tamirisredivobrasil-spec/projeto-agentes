@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview - 5 Dias com Variacao de Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root {
+    --bg: #101514;
+    --panel: rgba(255, 255, 255, 0.06);
+    --line: rgba(255, 255, 255, 0.10);
+    --cream: #f5efe6;
+    --sand: #dfcfbe;
+    --warm: #c79873;
+    --olive: #7f9383;
+    --ink: #14201b;
+    --charcoal: #171717;
+    --mist: #f2f2f0;
+    --stone: #d7d3cd;
+    --muted: rgba(255, 255, 255, 0.72);
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+    --radius: 36px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(circle at top left, rgba(199, 152, 115, 0.16), transparent 28%),
+      radial-gradient(circle at top right, rgba(127, 147, 131, 0.14), transparent 24%),
+      linear-gradient(180deg, #0e1312 0%, #17211e 100%);
+    padding: 24px 18px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toolbar {
+    width: min(1180px, 100%);
+    position: sticky;
+    top: 14px;
+    z-index: 20;
+    border-radius: 28px;
+    padding: 22px 24px;
+    margin-bottom: 30px;
+    background: rgba(245, 239, 230, 0.94);
+    color: #18201d;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(14px);
+  }
+
+  .toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .toolbar h1 {
+    margin: 0 0 8px;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .toolbar p {
+    margin: 0;
+    max-width: 760px;
+    line-height: 1.5;
+    color: #4a5550;
+    font-size: 14px;
+  }
+
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: #6b756f;
+    font-weight: 800;
+  }
+
+  button {
+    border: none;
+    border-radius: 999px;
+    padding: 15px 24px;
+    background: linear-gradient(135deg, #183028, #335447);
+    color: #fff;
+    font: 800 13px/1 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(24, 48, 40, 0.24);
+  }
+
+  #status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #6b756f;
+  }
+
+  #feed {
+    width: min(1180px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .post-block {
+    padding: 22px;
+    border-radius: 30px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+  }
+
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 18px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .post-day {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .post-title {
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #f8f2ea;
+  }
+
+  .post-style {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .slides-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    transform: scale(0.23);
+    transform-origin: top left;
+    margin-right: -832px;
+    margin-bottom: -1040px;
+    box-shadow: var(--shadow);
+  }
+
+  .slide * { position: relative; z-index: 2; }
+
+  .slide::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border-radius: calc(var(--radius) - 10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .slide-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px;
+  }
+
+  .slide-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .badge {
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .counter {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .slide-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 860px;
+    margin: auto 0;
+  }
+
+  .kicker {
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .script {
+    font-family: 'Caveat', cursive;
+    font-size: 126px;
+    line-height: 0.88;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    max-width: 760px;
+  }
+
+  .headline {
+    font-size: 78px;
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    max-width: 860px;
+  }
+
+  .body {
+    font-size: 52px;
+    line-height: 1.3;
+    font-weight: 600;
+    max-width: 840px;
+  }
+
+  .body strong { font-weight: 800; }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .brand-role {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .note {
+    max-width: 340px;
+    font-size: 21px;
+    line-height: 1.45;
+    text-align: right;
+  }
+
+  .style-1 {
+    background-size: cover;
+    background-position: center;
+    color: #fffaf3;
+  }
+
+  .style-1::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(28, 17, 10, 0.18), rgba(28, 17, 10, 0.40) 48%, rgba(28, 17, 10, 0.78) 100%),
+      linear-gradient(135deg, rgba(102, 63, 40, 0.38), rgba(23, 36, 31, 0.12) 46%);
+  }
+
+  .style-1 .badge {
+    background: rgba(255, 245, 232, 0.14);
+    color: rgba(255, 250, 243, 0.84);
+  }
+
+  .style-1 .counter,
+  .style-1 .kicker,
+  .style-1 .brand-role,
+  .style-1 .note {
+    color: rgba(255, 250, 243, 0.74);
+  }
+
+  .style-1 .accent {
+    color: #ffd2b4;
+  }
+
+  .style-2 {
+    color: #151515;
+    background:
+      radial-gradient(circle at top right, rgba(0, 0, 0, 0.06), transparent 24%),
+      linear-gradient(180deg, #faf9f6 0%, #ece8e1 100%);
+  }
+
+  .style-2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 36px 36px;
+    opacity: 0.45;
+  }
+
+  .style-2::after {
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .style-2 .badge {
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.58);
+  }
+
+  .style-2 .counter,
+  .style-2 .kicker,
+  .style-2 .brand-role,
+  .style-2 .note {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .style-2 .script {
+    font-family: 'Manrope', sans-serif;
+    font-size: 38px;
+    line-height: 1.22;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    max-width: none;
+  }
+
+  .style-2 .headline {
+    font-size: 88px;
+    max-width: 900px;
+  }
+
+  .style-2 .body {
+    font-size: 50px;
+  }
+
+  .style-2 .accent {
+    color: #5d6b63;
+  }
+
+  .object-card {
+    position: absolute;
+    right: 78px;
+    top: 140px;
+    width: 270px;
+    height: 360px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(214, 209, 201, 0.9));
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .object-card::before {
+    content: '';
+    position: absolute;
+    inset: 22px;
+    border-radius: 20px;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02)),
+      repeating-linear-gradient(180deg, transparent 0 28px, rgba(0, 0, 0, 0.05) 28px 30px);
+  }
+
+  .object-card::after {
+    content: '';
+    position: absolute;
+    bottom: 58px;
+    right: 42px;
+    width: 110px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    transform: rotate(-22deg);
+  }
+
+  @media (max-width: 900px) {
+    body { padding: 14px 12px 40px; }
+    .toolbar { top: 10px; padding: 18px; border-radius: 22px; }
+    .post-block { padding: 16px; border-radius: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="toolbar-row">
+    <div>
+      <p class="eyebrow">Preview de aprovação</p>
+      <h1>5 dias com variação de design</h1>
+      <p>Estilo 1 alternado com Estilo 2, mantendo a marca em psicologia baseada em evidência, com foco em identificação emocional e clareza cognitiva.</p>
+    </div>
+    <button onclick="downloadAll()">Baixar preview</button>
+  </div>
+  <div id="status">Pronto para visualizar e exportar os 5 dias de teste.</div>
+</div>
+
+<div id="feed"></div>
+
+<script>
+const posts = [
+  {
+    day: 11,
+    title: 'Ansiedade de alta performance',
+    style: 1,
+    styleLabel: 'Estilo 1 - Editorial da marca',
+    background: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1080&h=1350&q=80',
+    note: 'Acolhimento, reflexao e identificacao emocional.',
+    slides: [
+      { kicker: 'Voce parece forte', headline: 'Mas por dentro vive no limite.', body: '' },
+      { kicker: 'O custo invisivel', headline: 'A ansiedade de alta performance costuma ser elogiada antes de ser percebida como sofrimento.', body: '' },
+      { kicker: 'Quase ninguem ve', headline: 'Voce entrega, resolve, sustenta tudo.', body: 'E quase ninguem enxerga o custo emocional disso.' },
+      { kicker: 'O ponto central', headline: 'O problema nao e ser responsavel.', body: 'E viver como se descansar fosse fracasso.' },
+      { kicker: 'Caminho terapeutico', headline: 'A terapia ajuda a desmontar essa logica de sobrevivencia.', body: 'E construir uma vida mais leve.' }
+    ]
+  },
+  {
+    day: 12,
+    title: 'Regulacao emocional na pratica',
+    style: 2,
+    styleLabel: 'Estilo 2 - Neutro minimalista',
+    note: 'Psicoeducacao direta, limpa e confiavel.',
+    slides: [
+      { kicker: 'Regulacao emocional', headline: 'O que e na pratica?', body: '' },
+      { kicker: 'Primeiro ajuste', headline: 'Nao e parar de sentir.', body: '' },
+      { kicker: 'Definicao clara', headline: 'E perceber o que voce sente, entender o que esta acontecendo e responder com mais consciencia.', body: '' },
+      { kicker: 'Na DBT', headline: 'Isso envolve nomear emocoes, reduzir vulnerabilidades e usar habilidades concretas.', body: '' },
+      { kicker: 'Conclusao', headline: 'Sentir muito nao e fraqueza.', body: 'Voce pode precisar de ferramentas.' }
+    ]
+  },
+  {
+    day: 13,
+    title: 'Descanso culposo',
+    style: 1,
+    styleLabel: 'Estilo 1 - Editorial da marca',
+    background: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1080&h=1350&q=80',
+    note: 'Intimo, quente e com memoria emocional.',
+    slides: [
+      { kicker: 'Pergunta silenciosa', headline: 'Descansar te da culpa?', body: '' },
+      { kicker: 'O aprendizado antigo', headline: 'Muita gente nao aprendeu a descansar.', body: 'Aprendeu a merecer amor sendo util.' },
+      { kicker: 'O efeito hoje', headline: 'Quando voce para, sente incomodo em vez de alivio.', body: '' },
+      { kicker: 'Conflito interno', headline: 'O corpo pede pausa.', body: 'A mente acusa: "voce deveria estar produzindo".' },
+      { kicker: 'Reenquadramento', headline: 'Isso nao e preguica.', body: 'E uma historia emocional que pode ser trabalhada na terapia.' }
+    ]
+  },
+  {
+    day: 14,
+    title: 'DBT explicada com clareza',
+    style: 2,
+    styleLabel: 'Estilo 2 - Neutro minimalista',
+    note: 'Autoridade tecnica com visual simples.',
+    slides: [
+      { kicker: 'DBT', headline: 'Nao e so para crise intensa.', body: '' },
+      { kicker: 'Para que serve', headline: 'Ela ensina habilidades para lidar melhor com emocoes, relacoes e impulsos.', body: '' },
+      { kicker: 'Duas bases', headline: 'A abordagem combina aceitacao e mudanca.', body: '' },
+      { kicker: 'Na pratica', headline: 'Voce aprende a validar sua dor sem se entregar a ela.', body: '' },
+      { kicker: 'Base cientifica', headline: 'E uma abordagem baseada em evidencias.', body: 'Muito util para quem vive no 8 ou 80 emocional.' }
+    ]
+  },
+  {
+    day: 15,
+    title: 'Feridas da infancia',
+    style: 1,
+    styleLabel: 'Estilo 1 - Editorial da marca',
+    background: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1080&h=1350&q=80',
+    note: 'Profundo, afetivo e acolhedor.',
+    slides: [
+      { kicker: 'Infancia emocional', headline: 'Nem toda ferida desaparece porque voce cresceu.', body: '' },
+      { kicker: 'Continuidades', headline: 'Alguns padroes seguem vivos nas relacoes, na culpa e na forma como voce se cobra.', body: '' },
+      { kicker: 'A parte ferida', headline: 'As vezes, o adulto sabe o que fazer.', body: 'Mas a parte ferida continua reagindo.' },
+      { kicker: 'Por isso', headline: 'Certas dores parecem desproporcionais ao presente.', body: '' },
+      { kicker: 'Cura possivel', headline: 'Curar nao e apagar o passado.', body: 'E parar de deixar que ele decida tudo por voce.' }
+    ]
+  }
+];
+
+const feed = document.getElementById('feed');
+const PT_REPLACEMENTS = [
+  [/\bVoce\b/g, 'Você'],
+  [/\bvoce\b/g, 'você'],
+  [/\bnao\b/g, 'não'],
+  [/\bNao\b/g, 'Não'],
+  [/\btambem\b/g, 'também'],
+  [/\bevidencia\b/g, 'evidência'],
+  [/\bEvidencia\b/g, 'Evidência'],
+  [/\bevidencias\b/g, 'evidências'],
+  [/\btecnica\b/g, 'técnica'],
+  [/\bclinica\b/g, 'clínica'],
+  [/\bpsicoeducacao\b/g, 'psicoeducação'],
+  [/\binfancia\b/g, 'infância'],
+  [/\brelacoes\b/g, 'relações'],
+  [/\bpadroes\b/g, 'padrões'],
+  [/\bAs vezes\b/g, 'Às vezes'],
+  [/\bconsciencia\b/g, 'consciência'],
+  [/\bpreguica\b/g, 'preguiça'],
+  [/\blogica\b/g, 'lógica'],
+  [/\breflexao\b/g, 'reflexão'],
+  [/\bidentificacao\b/g, 'identificação']
+];
+
+function pt(text) {
+  return PT_REPLACEMENTS.reduce((result, [pattern, replacement]) => result.replace(pattern, replacement), text);
+}
+
+function renderSlide(post, slide, index) {
+  const article = document.createElement('article');
+  article.className = `slide style-${post.style}`;
+  article.id = `day-${post.day}-slide-${index + 1}`;
+
+  if (post.style === 1) {
+    article.style.backgroundImage = `url('${post.background}')`;
+  }
+
+  article.innerHTML = `
+    ${post.style === 2 ? '<div class="object-card"></div>' : ''}
+    <div class="slide-inner">
+      <div class="slide-top">
+        <div class="badge">${pt('Psicologia baseada em evidencia')}</div>
+        <div class="counter">${String(index + 1).padStart(2, '0')} / ${String(post.slides.length).padStart(2, '0')}</div>
+      </div>
+      <div class="slide-copy">
+        <div class="script">${pt(post.style === 1 ? 'Acolher tambem e compreender.' : slide.kicker)}</div>
+        <div class="kicker">${pt(post.style === 1 ? slide.kicker : 'Clareza clinica')}</div>
+        <div class="headline">${pt(slide.headline).replace(/"(.*?)"/g, '<span class="accent">"$1"</span>')}</div>
+        ${slide.body ? `<div class="body">${pt(slide.body).replace(/"(.*?)"/g, '<span class="accent">"$1"</span>')}</div>` : ''}
+      </div>
+      <div class="footer">
+        <div class="brand">
+          <div class="brand-name">@psitamiris.redivo</div>
+          <div class="brand-role">${pt(post.style === 1 ? 'tcc, dbt e acolhimento' : 'clareza, evidencia e tecnica')}</div>
+        </div>
+        <div class="note">${pt(post.note)}</div>
+      </div>
+    </div>
+  `;
+
+  return article;
+}
+
+posts.forEach((post) => {
+  const section = document.createElement('section');
+  section.className = 'post-block';
+  section.innerHTML = `
+    <div class="post-meta">
+      <div>
+        <div class="post-day">Dia ${String(post.day).padStart(2, '0')}</div>
+        <div class="post-title">${pt(post.title)}</div>
+      </div>
+      <div class="post-style">${pt(post.styleLabel)}</div>
+    </div>
+    <div class="slides-row" id="row-${post.day}"></div>
+  `;
+  feed.appendChild(section);
+
+  const row = document.getElementById(`row-${post.day}`);
+  post.slides.forEach((slide, index) => {
+    row.appendChild(renderSlide(post, slide, index));
+  });
+});
+
+async function downloadAll() {
+  const status = document.getElementById('status');
+  const button = document.querySelector('button');
+  button.disabled = true;
+  await document.fonts.ready;
+
+  const total = posts.reduce((sum, post) => sum + post.slides.length, 0);
+  let count = 0;
+
+  for (const post of posts) {
+    for (let index = 0; index < post.slides.length; index++) {
+      count += 1;
+      status.innerText = `Exportando ${count} de ${total}... (Dia ${post.day}, slide ${index + 1})`;
+
+      const slide = document.getElementById(`day-${post.day}-slide-${index + 1}`);
+      slide.style.transform = 'none';
+      slide.style.marginRight = '0';
+      slide.style.marginBottom = '0';
+
+      const canvas = await html2canvas(slide, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: false,
+        backgroundColor: null
+      });
+
+      const link = document.createElement('a');
+      link.download = `Preview_Dia_${String(post.day).padStart(2, '0')}_Slide_${index + 1}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+
+      slide.style.transform = 'scale(0.23)';
+      slide.style.marginRight = '-832px';
+      slide.style.marginBottom = '-1040px';
+
+      await new Promise((resolve) => setTimeout(resolve, 650));
+    }
+  }
+
+  status.innerText = 'Exportação concluída.';
+  button.disabled = false;
+}
+</script>
+</body>
+</html>

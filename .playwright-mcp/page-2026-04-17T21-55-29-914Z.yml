@@ -1,0 +1,226 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Pular para o conteúdo":
+      - /url: "#"
+      - generic [ref=e8] [cursor=pointer]: Pular para o conteúdo
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - link "Página inicial do Pinterest" [ref=e13] [cursor=pointer]:
+          - /url: /
+          - img [ref=e16]
+        - link "Explorar" [ref=e32] [cursor=pointer]:
+          - /url: /ideas
+          - generic [ref=e33]: Explorar
+      - generic [ref=e37]:
+        - combobox "Pesquisar" [ref=e39]: fernandalandeiro posts instagram
+        - button "Remover entrada de pesquisa" [ref=e44] [cursor=pointer]:
+          - img [ref=e47]
+      - generic [ref=e49]:
+        - button "Entrar" [ref=e51] [cursor=pointer]:
+          - generic [ref=e53]: Entrar
+        - button "Criar conta" [ref=e55] [cursor=pointer]:
+          - generic [ref=e57]: Criar conta
+        - button "Configuração" [ref=e60] [cursor=pointer]:
+          - img [ref=e63]
+  - main [ref=e66]:
+    - generic [ref=e68]:
+      - generic [ref=e71]:
+        - heading "Pesquisar" [level=1] [ref=e73]
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - text: Veja o que encontramos para fernanda landeiro posts instagram. Pesquisar
+            - link "fernandalandeiro posts instagram" [ref=e78] [cursor=pointer]:
+              - /url: /search/pins/?rs=typo_auto_original&q=fernandalandeiro%20posts%20instagram&auto_correction_disabled=true
+            - text: em vez disso?
+          - button "Mostrar filtros" [ref=e88] [cursor=pointer]:
+            - img [ref=e92]
+      - generic [ref=e97]:
+        - generic [ref=e98]: Carregando mais resultados da pesquisa por fernandalandeiro posts instagram
+        - list [ref=e103]:
+          - listitem [ref=e104]:
+            - group "Cartão de Pin" [ref=e107]:
+              - generic [ref=e109]:
+                - link "a blackboard with spanish text on it" [ref=e112] [cursor=pointer]:
+                  - /url: /pin/4292562135747526/
+                  - img "a blackboard with spanish text on it" [ref=e122]
+                - generic [ref=e124]:
+                  - generic:
+                    - link "a blackboard with spanish text on it":
+                      - /url: /pin/4292562135747526/
+                  - generic "Mais ações" [ref=e131]:
+                    - button "Mais ações" [ref=e132] [cursor=pointer]:
+                      - img [ref=e135]
+          - listitem [ref=e137]:
+            - group "Cartão de Pin" [ref=e140]:
+              - generic [ref=e142]:
+                - link "a woman taking a selfie in front of a mirror" [ref=e145] [cursor=pointer]:
+                  - /url: /pin/57632070225685611/
+                  - img "a woman taking a selfie in front of a mirror" [ref=e155]
+                - generic [ref=e157]:
+                  - generic:
+                    - link "a woman taking a selfie in front of a mirror":
+                      - /url: /pin/57632070225685611/
+                  - generic "Mais ações" [ref=e164]:
+                    - button "Mais ações" [ref=e165] [cursor=pointer]:
+                      - img [ref=e168]
+          - listitem [ref=e170]:
+            - group "Cartão de Pin" [ref=e173]:
+              - generic [ref=e175]:
+                - link "Look Fernanda Landeiro Fernanda, Look, Foto" [ref=e178] [cursor=pointer]:
+                  - /url: /pin/61854194875928687/
+                  - img "Look Fernanda Landeiro Fernanda, Look, Foto" [ref=e188]
+                - generic [ref=e190]:
+                  - generic:
+                    - link "Look Fernanda Landeiro Fernanda, Look, Foto":
+                      - /url: /pin/61854194875928687/
+                  - generic "Mais ações" [ref=e197]:
+                    - button "Mais ações" [ref=e198] [cursor=pointer]:
+                      - img [ref=e201]
+          - listitem [ref=e203]:
+            - group "Cartão de Pin" [ref=e206]:
+              - generic [ref=e208]:
+                - link "many different pictures of a woman holding her hands up to her face and making faces" [ref=e211] [cursor=pointer]:
+                  - /url: /pin/359865826494663652/
+                  - img "many different pictures of a woman holding her hands up to her face and making faces" [ref=e221]
+                - generic [ref=e223]:
+                  - generic:
+                    - link "many different pictures of a woman holding her hands up to her face and making faces":
+                      - /url: /pin/359865826494663652/
+                  - generic "Mais ações" [ref=e230]:
+                    - button "Mais ações" [ref=e231] [cursor=pointer]:
+                      - img [ref=e234]
+          - listitem [ref=e236]:
+            - group "Cartão de Pin" [ref=e239]:
+              - generic [ref=e241]:
+                - link "a woman taking a selfie with her cell phone in front of her face and wearing a black dress" [ref=e244] [cursor=pointer]:
+                  - /url: /pin/589197563789341383/
+                  - img "a woman taking a selfie with her cell phone in front of her face and wearing a black dress" [ref=e254]
+                - generic [ref=e256]:
+                  - generic:
+                    - link "a woman taking a selfie with her cell phone in front of her face and wearing a black dress":
+                      - /url: /pin/589197563789341383/
+                  - generic "Mais ações" [ref=e263]:
+                    - button "Mais ações" [ref=e264] [cursor=pointer]:
+                      - img [ref=e267]
+          - listitem [ref=e269]:
+            - group "Cartão de Pin" [ref=e272]:
+              - generic [ref=e274]:
+                - link "a blackboard with spanish text on it" [ref=e277] [cursor=pointer]:
+                  - /url: /pin/4292562135747542/
+                  - img "a blackboard with spanish text on it" [ref=e287]
+                - generic [ref=e289]:
+                  - generic:
+                    - link "a blackboard with spanish text on it":
+                      - /url: /pin/4292562135747542/
+                  - generic "Mais ações" [ref=e296]:
+                    - button "Mais ações" [ref=e297] [cursor=pointer]:
+                      - img [ref=e300]
+          - listitem [ref=e302]:
+            - generic [ref=e303]:
+              - generic [ref=e309]:
+                - region "third-party-ad-slot":
+                  - region "3p-google-ad-slot"
+              - group "Cartão de Pin" [ref=e311]:
+                - generic [ref=e313]:
+                  - link "a woman smiling while laying on the floor" [ref=e316] [cursor=pointer]:
+                    - /url: /pin/639581584621307060/
+                    - img "a woman smiling while laying on the floor" [ref=e326]
+                  - generic [ref=e328]:
+                    - generic:
+                      - link "a woman smiling while laying on the floor":
+                        - /url: /pin/639581584621307060/
+                    - generic "Mais ações" [ref=e335]:
+                      - button "Mais ações" [ref=e336] [cursor=pointer]:
+                        - img [ref=e339]
+          - listitem [ref=e341]:
+            - group "Cartão de Pin" [ref=e344]:
+              - generic [ref=e346]:
+                - link "a woman sitting in the back seat of a car wearing a green hat and sweater" [ref=e349] [cursor=pointer]:
+                  - /url: /pin/78390849759347307/
+                  - img "a woman sitting in the back seat of a car wearing a green hat and sweater" [ref=e359]
+                - generic [ref=e361]:
+                  - generic:
+                    - link "a woman sitting in the back seat of a car wearing a green hat and sweater":
+                      - /url: /pin/78390849759347307/
+                  - generic "Mais ações" [ref=e368]:
+                    - button "Mais ações" [ref=e369] [cursor=pointer]:
+                      - img [ref=e372]
+          - listitem [ref=e374]:
+            - group "Cartão de Pin" [ref=e378]:
+              - generic [ref=e380]:
+                - link "🚫 PROIBIDO PLAGIAR, reproduzir ou usar qualquer material desde portfólio sem autorização prévia. Esse design pertence a @mirare.design Design gráfico | Design criativo | Design social media | Identidade Visual | Design de Post | Post carrossel | Feed | Instagram | Branding | Nutri Ideias De Post Instagram Nutricionista, Ideias De Post Nutricionista, Stories Nutricionista Instagram, Conteúdo Nutricionista, Posts Nutricionista, Post Nutricionista, Post Nutrição, Nutrição Comportamental, Materias De Nutrição" [ref=e383] [cursor=pointer]:
+                  - /url: /pin/24910604186207327/
+                  - generic [ref=e385]:
+                    - generic [ref=e390]:
+                      - img "Design Social Media | Nutricionista" [ref=e394]
+                      - img "Design Social Media | Nutricionista" [ref=e398]
+                      - img "Design Social Media | Nutricionista" [ref=e402]
+                      - img "Design Social Media | Nutricionista" [ref=e406]
+                      - img "Design Social Media | Nutricionista" [ref=e410]
+                    - generic [ref=e412]:
+                      - button "Design Social Media | Nutricionista" [ref=e414]
+                      - button "Design Social Media | Nutricionista" [ref=e417]
+                      - button "Design Social Media | Nutricionista" [ref=e420]
+                      - button "Design Social Media | Nutricionista" [ref=e423]
+                      - button "Design Social Media | Nutricionista" [ref=e426]
+                - generic [ref=e429]:
+                  - generic:
+                    - link "🚫 PROIBIDO PLAGIAR, reproduzir ou usar qualquer material desde portfólio sem autorização prévia. Esse design pertence a @mirare.design Design gráfico | Design criativo | Design social media | Identidade Visual | Design de Post | Post carrossel | Feed | Instagram | Branding | Nutri Ideias De Post Instagram Nutricionista, Ideias De Post Nutricionista, Stories Nutricionista Instagram, Conteúdo Nutricionista, Posts Nutricionista, Post Nutricionista, Post Nutrição, Nutrição Comportamental, Materias De Nutrição":
+                      - /url: /pin/24910604186207327/
+                  - generic "Mais ações" [ref=e436]:
+                    - button "Mais ações" [ref=e437] [cursor=pointer]:
+                      - img [ref=e440]
+          - listitem [ref=e442]:
+            - group "Cartão de Pin" [ref=e445]:
+              - generic [ref=e447]:
+                - generic [ref=e448]:
+                  - link "a woman holding a cell phone up to her ear and looking at the camera with a smile on her face" [ref=e450] [cursor=pointer]:
+                    - /url: /pin/658229301827918057/
+                    - img "Contém uma imagem de:" [ref=e466]
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic: 0:14
+                - generic [ref=e468]:
+                  - generic:
+                    - link "a woman holding a cell phone up to her ear and looking at the camera with a smile on her face":
+                      - /url: /pin/658229301827918057/
+                  - generic "Mais ações" [ref=e475]:
+                    - button "Mais ações" [ref=e476] [cursor=pointer]:
+                      - img [ref=e479]
+          - listitem [ref=e481]:
+            - generic [ref=e482]:
+              - generic [ref=e488]:
+                - region "third-party-ad-slot":
+                  - region "3p-google-ad-slot"
+              - group "Cartão de Pin" [ref=e490]:
+                - generic [ref=e492]:
+                  - link "a woman is walking down the street at night with her handbag in her other hand" [ref=e495] [cursor=pointer]:
+                    - /url: /pin/260786634668760815/
+                    - img "a woman is walking down the street at night with her handbag in her other hand" [ref=e505]
+                  - generic [ref=e507]:
+                    - generic:
+                      - link "a woman is walking down the street at night with her handbag in her other hand":
+                        - /url: /pin/260786634668760815/
+                    - generic "Mais ações" [ref=e514]:
+                      - button "Mais ações" [ref=e515] [cursor=pointer]:
+                        - img [ref=e518]
+          - listitem [ref=e520]:
+            - generic [ref=e521]:
+              - generic [ref=e527]:
+                - region "third-party-ad-slot":
+                  - region "3p-google-ad-slot"
+              - group "Cartão de Pin" [ref=e529]:
+                - generic [ref=e531]:
+                  - link "a woman with long brown hair standing in front of a window and looking at the camera" [ref=e534] [cursor=pointer]:
+                    - /url: /pin/172825704439522868/
+                    - img "a woman with long brown hair standing in front of a window and looking at the camera" [ref=e544]
+                  - generic [ref=e546]:
+                    - generic:
+                      - link "a woman with long brown hair standing in front of a window and looking at the camera":
+                        - /url: /pin/172825704439522868/
+                    - generic "Mais ações" [ref=e553]:
+                      - button "Mais ações" [ref=e554] [cursor=pointer]:
+                        - img [ref=e557]

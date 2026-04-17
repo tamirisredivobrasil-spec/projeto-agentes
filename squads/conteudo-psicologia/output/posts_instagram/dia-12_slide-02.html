@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dia-12 - Slide 2 - Nao e preciso colapsar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1080px;
+            height: 1440px;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 72px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            max-width: 936px;
+        }
+        
+        .kicker {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin-bottom: 48px;
+            line-height: 1.2;
+        }
+        
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 58px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 32px;
+        }
+        
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 48px;
+        }
+        
+        .text-block {
+            font-family: 'Inter', sans-serif;
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        
+        .hl {
+            font-weight: 700;
+            color: #D4A5A5;
+        }
+        
+        .logo {
+            position: absolute;
+            bottom: 36px;
+            right: 36px;
+            z-index: 4;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .background-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .slide.photo-quote .content {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .slide.dark {
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D2D44 100%);
+        }
+        
+        .slide.dark .kicker {
+            font-size: 43px;
+            color: #8B7355;
+        }
+        
+        .slide.dark .text-block {
+            color: #FFFFFF;
+        }
+        
+        .slide.dark .logo {
+            color: #D4A5A5;
+        }
+        
+        .slide.light {
+            background: linear-gradient(135deg, #F5EFE7 0%, #FAF7F2 100%);
+        }
+        
+        .slide.light .kicker {
+            font-size: 43px;
+            color: #8B7355;
+        }
+        
+        .slide.light .text-block {
+            color: #1A1A2E;
+        }
+        
+        .slide.light .logo {
+            color: #8B7355;
+        }
+        
+        .slide.paper {
+            background: linear-gradient(135deg, #F5EFE7 0%, #FAF7F2 100%);
+        }
+        
+        .slide.paper .kicker {
+            font-size: 43px;
+            color: #8B7355;
+        }
+        
+        .slide.paper .text-block {
+            color: #1A1A2E;
+        }
+        
+        .slide.paper .logo {
+            color: #8B7355;
+        }
+        
+        .slide.photo-quote {
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D2D44 100%);
+        }
+        
+        .slide.photo-quote .overlay {
+            background: rgba(26, 26, 46, 0.65);
+        }
+        
+        .slide.photo-quote .title {
+            color: #FFFFFF;
+        }
+        
+        .slide.photo-quote .subtitle {
+            color: #F5EFE7;
+        }
+        
+        .slide.photo-quote .kicker {
+            font-size: 20px;
+            color: #D4A5A5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .slide.photo-quote .logo {
+            color: #D4A5A5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide light">
+            <div class="content">
+                <h2 class="kicker">Nao e preciso colapsar</h2>
+                <p class="text-block">Voce nao precisa estar em crise para ir a terapia.</p><p class="text-block">Voce pode ir porque quer se entender melhor e parar de repetir os mesmos padroes.</p>
+            </div>
+            <div class="logo">@psitamiris.redivo</div>
+        </div>
+</body>
+</html>

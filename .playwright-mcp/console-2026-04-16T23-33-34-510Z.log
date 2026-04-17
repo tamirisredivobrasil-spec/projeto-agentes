@@ -1,0 +1,52 @@
+[    1919ms] [LOG] %c%s color: red; background: yellow; font-size: 24px; AVISO @ https://www.gstatic.com/_/mss/boq-trends/_/js/k=boq-trends.TrendsUi.pt_BR.I2Cx-P5n_YA.2018.O/am=AAAAYFg/d=1/excm=_b,_tp,homeview/ed=1/dg=0/wt=2/ujg=1/rs=APgalu4FBf7sNcW99CMoPs0dga6SMp_xWQ/dti=1/m=_b,_tp:256
+[    1919ms] [LOG] %c%s font-size: 18px; É possível que o uso deste console permita que invasores falsifiquem sua identidade para roubar informações por meio de um ataque chamado "Self-XSS".
+Não insira nem cole códigos que você não conhece. @ https://www.gstatic.com/_/mss/boq-trends/_/js/k=boq-trends.TrendsUi.pt_BR.I2Cx-P5n_YA.2018.O/am=AAAAYFg/d=1/excm=_b,_tp,homeview/ed=1/dg=0/wt=2/ujg=1/rs=APgalu4FBf7sNcW99CMoPs0dga6SMp_xWQ/dti=1/m=_b,_tp:256
+[  102353ms] [WARNING] ARIA: Attribute " aria-label ", required for accessibility, is missing on node: JSHandle@node @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  102440ms] [WARNING] ARIA: Attribute " aria-label ", required for accessibility, is missing on node: JSHandle@node @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  108176ms] [ERROR] Cause: Possibly unhandled rejection: {} @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  108177ms] [ERROR] Exception: TypeError: undefined: Cannot read properties of undefined (reading 'rankedKeyword')
+    at c.middleware_ (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1667:61)
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1488:249
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1200:20
+    at lodash.forIn (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1309:462)
+    at c.onSuccess_ (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1488:211)
+    at wrapper (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1209:32)
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4129:358
+    at n.$digest (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4140:479)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:394)
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4136:306 @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  112618ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://play.google.com/log?format=json&hasfast=true:0
+[  151580ms] [ERROR] Exception: Error: undefined: [$rootScope:inprog] http://errors.angularjs.org/1.6.4-local+sha.617b36117/$rootScope/inprog?p0=%24apply
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4000:79
+    at p (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4135:478)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:305)
+    at WG.scrollHandler (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:2414:339)
+    at invokeFunc (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:171)
+    at leadingEdge (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:305)
+    at debounced (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1287:396)
+    at n.$eval (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:108)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:333)
+    at sg (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4029:54) @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  151581ms] [ERROR] Exception: Error: undefined: [$rootScope:inprog] http://errors.angularjs.org/1.6.4-local+sha.617b36117/$rootScope/inprog?p0=%24apply
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4000:79
+    at p (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4135:478)
+    at n.$digest (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4140:321)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:394)
+    at WG.scrollHandler (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:2414:339)
+    at invokeFunc (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:171)
+    at leadingEdge (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:305)
+    at debounced (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1287:396)
+    at n.$eval (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:108)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:333) @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  151581ms] [ERROR] Exception: Error: undefined: undefined: [$rootScope:inprog] http://errors.angularjs.org/1.6.4-local+sha.617b36117/$rootScope/inprog?p0=%24apply
+    at https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4000:79
+    at p (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4135:478)
+    at n.$digest (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4140:321)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:394)
+    at WG.scrollHandler (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:2414:339)
+    at invokeFunc (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:171)
+    at leadingEdge (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1285:305)
+    at debounced (https://ssl.gstatic.com/trends_nrtr/4356_RC01/trends__pt_br.js:1287:396)
+    at n.$eval (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:108)
+    at n.$apply (https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4144:333) @ https://ssl.gstatic.com/trends_nrtr/4356_RC01/third_parties_min.js:4116
+[  170092ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://play.google.com/log?format=json&hasfast=true:0
