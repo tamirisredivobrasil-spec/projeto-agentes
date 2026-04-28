@@ -1,0 +1,5 @@
+.env
+squads/monitor-noticias/.env
+_opensquad/_browser_profile/
+__pycache__/
+*.pyc
