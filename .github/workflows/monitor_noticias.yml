@@ -45,4 +45,5 @@ jobs:
           git config --global user.email 'bot@opensquad.ai'
           git add squads/monitor-noticias/noticias_vistas.json
           git commit -m "Update seen news [skip ci]" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
