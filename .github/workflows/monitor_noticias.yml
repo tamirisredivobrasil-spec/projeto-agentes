@@ -29,8 +29,8 @@ jobs:
       - name: Executar Agente (Alerta ou Resumo)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          CALLMEBOT_API_KEY: ${{ secrets.CALLMEBOT_API_KEY }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd squads/monitor-noticias
           if [ "${{ github.event.schedule }}" == "0 11 * * *" ]; then

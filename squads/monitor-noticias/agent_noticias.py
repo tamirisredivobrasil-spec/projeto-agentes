@@ -2,18 +2,16 @@ import feedparser
 import requests
 import json
 import os
+import sys
 import yaml
 import datetime
-import time
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-# Carrega variáveis de ambiente
 load_dotenv()
 
-# Configuração da IA
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 def load_config():
     with open("config.yaml", "r", encoding="utf-8") as f:
@@ -27,7 +25,6 @@ def load_seen_news():
     return []
 
 def save_seen_news(seen_list):
-    # Mantém apenas as últimas 200 notícias para não crescer infinitamente
     seen_list = seen_list[-200:]
     with open("noticias_vistas.json", "w", encoding="utf-8") as f:
         json.dump(seen_list, f, ensure_ascii=False, indent=4)
@@ -61,7 +58,6 @@ def analyze_relevance(item, config):
     """
     try:
         response = model.generate_content(prompt)
-        # Limpa a resposta para garantir que seja um JSON válido
         text = response.text.strip()
         if "```json" in text:
             text = text.split("```json")[1].split("```")[0].strip()
@@ -70,65 +66,59 @@ def analyze_relevance(item, config):
         print(f"Erro ao analisar notícia: {e}")
         return {"nota": 0, "resumo": ""}
 
-def send_whatsapp(message):
-    api_key = os.getenv("CALLMEBOT_API_KEY")
-    phone = os.getenv("WHATSAPP_PHONE")
-    if not api_key or not phone:
-        print("Erro: CALLMEBOT_API_KEY ou WHATSAPP_PHONE não configurados.")
+def send_telegram(message):
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        print("Erro: TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não configurados.")
         return
-
-    url = f"https://api.callmebot.com/whatsapp.php?phone={phone}&text={requests.utils.quote(message)}&apikey={api_key}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        print("Mensagem enviada com sucesso!")
-    else:
-        print(f"Erro ao enviar WhatsApp: {response.text}")
-
-import sys
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    # Telegram tem limite de 4096 caracteres por mensagem
+    for i in range(0, len(message), 4000):
+        chunk = message[i:i+4000]
+        response = requests.post(url, json={"chat_id": chat_id, "text": chunk, "parse_mode": "Markdown"})
+        if response.status_code == 200:
+            print("Mensagem enviada com sucesso!")
+        else:
+            print(f"Erro ao enviar Telegram: {response.text}")
 
 def send_summary(news_list):
     if not news_list:
         return
-    
-    header = "🧠 *RESUMO DIÁRIO — PSICOLOGIA*\n"
-    header += f"📅 {datetime.datetime.now().strftime('%d/%m/%Y')}\n\n"
-    
+    header = f"🧠 *RESUMO DIÁRIO — PSICOLOGIA*\n📅 {datetime.datetime.now().strftime('%d/%m/%Y')}\n\n"
     body = ""
     for item in news_list:
         body += f"━━━━━━━━━━━━━━━━\n"
         body += f"⭐ *{item['title']}*\n"
         body += f"💡 {item['resumo']}\n"
         body += f"🔗 {item['link']}\n\n"
-    
-    footer = "🤖 _Gerado por Opensquad para @psitamiris.redivo_"
-    send_whatsapp(header + body + footer)
+    footer = "🤖 _Gerado por Opensquad para @psitamiris\\.redivo_"
+    send_telegram(header + body + footer)
 
 def main():
     config = load_config()
     seen_ids = load_seen_news()
     all_news = fetch_news(config)
-    
+
     is_summary_mode = "--summary" in sys.argv
     relevant_for_summary = []
-    
+
     for item in all_news:
         if item['id'] not in seen_ids:
             analysis = analyze_relevance(item, config)
             item['nota'] = analysis['nota']
             item['resumo'] = analysis['resumo']
             seen_ids.append(item['id'])
-            
-            # Alerta imediato se for MUITO relevante (nota >= 8)
+
             if item['nota'] >= config['configuracoes']['min_relevancia_alerta']:
                 msg = f"🚨 *ALERTA DE NOTÍCIA RELEVANTE*\n\n📌 *{item['title']}*\n\n💡 {item['resumo']}\n\n🔗 {item['link']}"
-                send_whatsapp(msg)
-            
-            # Guarda para o resumo se tiver nota mínima (nota >= 6)
+                send_telegram(msg)
+
             if item['nota'] >= config['configuracoes']['min_relevancia_resumo']:
                 relevant_for_summary.append(item)
 
     save_seen_news(seen_ids)
-    
+
     if is_summary_mode and relevant_for_summary:
         send_summary(relevant_for_summary)
         print(f"Resumo diário enviado com {len(relevant_for_summary)} notícias.")
