@@ -6,6 +6,10 @@ on:
     - cron: '0 11 * * *' # Roda às 8h da manhã (Brasília) para o resumo diário
   workflow_dispatch:      # Permite rodar manualmente
 
+concurrency:
+  group: monitor-noticias
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -45,5 +49,5 @@ jobs:
           git config --global user.email 'bot@opensquad.ai'
           git add squads/monitor-noticias/noticias_vistas.json
           git commit -m "Update seen news [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main
-          git push
+          git pull --rebase origin main || git rebase --abort
+          git push || echo "Push failed, state will sync on next run"
